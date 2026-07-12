@@ -4505,7 +4505,7 @@ export const trails = [
     elevation_gain_m: 900,
     max_elevation_m: 1373,
     description: 'A classic climb in Doi Khun Tan National Park on the Lamphun–Lampang border, starting beside Thailand’s longest railway tunnel and ascending through pine and evergreen forest over four peaks (Mon 1–4) to sweeping views from the summit.',
-    photo_url: '',
+    photo_url: '/photos/doi-khun-tan-1.jpg',
     latitude: 18.4869,
     longitude: 99.2694,
     status: 'Open',
