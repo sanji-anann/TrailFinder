@@ -6,5 +6,5 @@ compatibility_date = "2024-11-01"
 # Create it once with:  npx wrangler kv namespace create VOTES
 # then paste the returned id below (and a preview_id for `wrangler dev`).
 kv_namespaces = [
-  { binding = "VOTES", id = "REPLACE_WITH_KV_NAMESPACE_ID" }
+  { binding = "VOTES", id = "37682620ad7544158588a66967b2dd4a" }
 ]
