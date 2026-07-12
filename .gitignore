@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output
+.next/
+dist/
+out/
+.wrangler/
+
+# Logs
+*.log
+
+# OS / editor
+.DS_Store
+*.swp
+
+# Local env (keep the example)
+.env
+.env.*
+!.env.example
+
+# Tooling / agent working dirs
+.claude/
+.agents/
