@@ -8,6 +8,7 @@ export const COUNTRY_TO_CONTINENT = {
   'South Korea': 'Asia',
   Malaysia: 'Asia',
   Thailand: 'Asia',
+  Taiwan: 'Asia',
   Iceland: 'Europe',
 }
 
