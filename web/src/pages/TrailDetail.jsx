@@ -7,6 +7,7 @@ import SeasonalHighlightTag from '../components/SeasonalHighlightTag'
 import MonthBar from '../components/MonthBar'
 import TrailMap from '../components/TrailMap'
 import TrailFeedback from '../components/TrailFeedback'
+import ShareButton from '../components/ShareButton'
 
 export default function TrailDetail() {
   const { slug } = useParams()
@@ -107,7 +108,10 @@ export default function TrailDetail() {
       )}
 
       <div className="trail-detail-header">
-        <h1>{trail.name}</h1>
+        <div className="trail-detail-title-row">
+          <h1>{trail.name}</h1>
+          <ShareButton title={trail.name} text={trail.description} />
+        </div>
         <p className="caption">{trail.region}, {trail.country}</p>
       </div>
 
