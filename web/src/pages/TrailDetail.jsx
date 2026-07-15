@@ -110,7 +110,7 @@ export default function TrailDetail() {
       <div className="trail-detail-header">
         <div className="trail-detail-title-row">
           <h1>{trail.name}</h1>
-          <ShareButton title={trail.name} text={trail.description} />
+          <ShareButton title={trail.name} />
         </div>
         <p className="caption">{trail.region}, {trail.country}</p>
       </div>

@@ -3,7 +3,13 @@ import { useState } from 'react'
 // Share the current page. Uses the native share sheet where available
 // (mobile + some desktop browsers); otherwise copies the link to the
 // clipboard and briefly confirms.
-export default function ShareButton({ title, text }) {
+//
+// We deliberately share only { title, url } — no `text`. iMessage (and some
+// other apps) will render a rich link-preview card only when the URL arrives
+// essentially alone; adding a `text` body makes them drop the card and paste
+// the description + link as plain text instead. The trail's own OG tags supply
+// the preview's title, description, and photo, so the body text is redundant.
+export default function ShareButton({ title }) {
   const [copied, setCopied] = useState(false)
 
   const handleShare = async () => {
@@ -11,7 +17,7 @@ export default function ShareButton({ title, text }) {
 
     if (navigator.share) {
       try {
-        await navigator.share({ title, text, url })
+        await navigator.share({ title, url })
         return
       } catch (err) {
         // User dismissed the sheet — leave quietly, don't fall through to copy.
