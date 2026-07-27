@@ -601,4 +601,32 @@ export const TRAIL_PHOTOS = {
     { url: '/photos/teapot-mountain-2.jpg', caption: 'Teapot Mountain', credit: 'lienyuan lee', license: 'CC BY 3.0', source: 'https://commons.wikimedia.org/wiki/File:%E7%84%A1%E8%80%B3%E8%8C%B6%E5%A3%BA%E5%B1%B1_Mt_Teapot_Lacking_Handle_-_panoramio.jpg' },
     { url: '/photos/teapot-mountain-3.jpg', caption: 'Teapot Mountain', credit: 'Queen shufang', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Soft_feeling_of_Teapot_mountain-Queen_shufang.jpg' },
   ],
+  // Nepal (209–214), Wikimedia Commons.
+  209: [
+    { url: '/photos/annapurna-circuit-1.jpg', caption: 'Prayer flags on Thorong La Pass', credit: 'Solundir', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:Thorong_La_pass_april_2011.jpg' },
+    { url: '/photos/annapurna-circuit-2.jpg', caption: 'Teahouse below Thorong La', credit: 'Solundir', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:Thorong_La_with_teahouse_in_April_2011.jpg' },
+    { url: '/photos/annapurna-circuit-3.jpg', caption: 'The Jhong Khola valley below Muktinath', credit: 'Greg Willis', license: 'CC BY-SA 2.0', source: 'https://commons.wikimedia.org/wiki/File:Looking_back_up_the_Jhong_Khola_valley_to_Jharkot,_Muktinath,_and_the_Thorong_La_pass_(4523539947).jpg' },
+  ],
+  210: [
+    { url: '/photos/annapurna-base-camp-1.jpg', caption: 'Machapuchare above Annapurna Base Camp', credit: 'Bijaya2043', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:Annapurna_Base_Camp_(3).JPG' },
+    { url: '/photos/annapurna-base-camp-2.jpg', caption: 'The lodges at Annapurna Base Camp', credit: 'Bijaya2043', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:Annapurna_Base_Camp_(4).JPG' },
+  ],
+  211: [
+    { url: '/photos/everest-base-camp-1.jpg', caption: 'Below the Khumbu Icefall at Base Camp', credit: 'Alpalfour', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:South_Everest_Base_Camp_sleeping_platform.jpg' },
+    { url: '/photos/everest-base-camp-2.jpg', caption: 'Everest Base Camp from Kala Patthar', credit: 'Goutam1962', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Everest_Base_Camp_from_Kala_Patther.jpg' },
+    { url: '/photos/everest-base-camp-3.jpg', caption: 'Everest Base Camp on a stormy day', credit: 'Daniel Oberhaus', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Everest_Base_Camp_on_a_Stormy_Day.jpg' },
+  ],
+  212: [
+    { url: '/photos/everest-view-trek-1.jpg', caption: 'Hotel Everest View', credit: 'Uwe Gille', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:Everest_View_Hotel.jpg' },
+    { url: '/photos/everest-view-trek-2.jpg', caption: 'The hotel on the ridge above Syangboche', credit: 'Bsk77', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:SyangbochePanoramaHotel.jpg' },
+  ],
+  213: [
+    { url: '/photos/yala-peak-climb-1.jpg', caption: 'Peaks above the Kyanjin valley, Langtang', credit: 'pnepalensis', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Around_Kyanjin_Valley,_Langtang_National_Park,_Rasuwa,_Nepal_1.jpg' },
+    { url: '/photos/yala-peak-climb-2.jpg', caption: 'Melungtse seen from Kyanjin Ri', credit: 'Badesaroj', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Melungtse_7181m_as_seen_from_Kyanjin_Ri_4773m.jpg' },
+  ],
+  214: [
+    { url: '/photos/island-peak-climb-1.jpg', caption: 'On the summit ridge of Island Peak', credit: 'Mountaineer', license: 'CC BY 3.0', source: 'https://commons.wikimedia.org/wiki/File:Summitting_Island_Peak.jpg' },
+    { url: '/photos/island-peak-climb-2.jpg', caption: 'Glaciers below Island Peak', credit: 'McKay Savage', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:Nepal_-_Island_Peak_-_008_-_Merging_Glaciers_far_below_(497820799).jpg' },
+    { url: '/photos/island-peak-climb-3.jpg', caption: 'Imja Tse (Island Peak)', credit: 'Alonzo Lyons', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Alonzo-lyons-imja-tse-island-peak-nepal-DSCN6013.jpg' },
+  ],
 }
