@@ -1,8 +1,14 @@
 // Sourced from AllTrails trail data (via connected trail-data MCP), reshaped to
 // match Database.md's Trails + Seasonal Highlights schema.
 //
-// Covers Australia, New Zealand, Japan, Malaysia, Thailand, Iceland, South Korea
-// and Taiwan.
+// Covers Australia, New Zealand, Japan, Malaysia, Thailand, Iceland, South Korea,
+// Taiwan and Nepal.
+//
+// NEPAL (trail_ids 209–214) are not from AllTrails — they were translated from a
+// curated Thai-language trekking CSV and enriched with sourced coordinates and
+// elevations. Photos are self-hosted Creative Commons images from Wikimedia
+// Commons (see trailPhotos.js), and they carry no `alltrails_url`. See the NEPAL
+// section header lower in this file for the field-mapping notes.
 //
 // TAIWAN (trail_ids 173–195) are not from AllTrails — they are a curated notable
 // subset of a Taiwan Forestry Agency national-trail CSV (117 trails), reshaped to
@@ -6760,6 +6766,267 @@ export const trails = [
       },
     ],
   },
+
+  // ── NEPAL (trail_ids 209–214) ───────────────────────────────────────────────
+  // Imported from a curated Nepal trekking CSV (Thai-language source, translated
+  // here) and enriched with sourced coordinates and elevations. The source CSV
+  // gives distance and duration as ranges; this schema stores single numbers, so
+  // each is the classic full-route figure with the range noted in
+  // `difficulty_notes`. Difficulty is mapped to this dataset's Easy/Moderate/Hard
+  // scale — the CSV's "Strenuous", "Moderate to Strenuous" and "Extreme /
+  // Technical" all become Hard, with the real distinction carried in the notes.
+  // `status_source_url` points at the managing authority (ACAP for the Annapurna
+  // Conservation Area, DNPWC for Sagarmatha and Langtang National Parks) rather
+  // than the commercial operator pages the CSV cited.
+  //
+  // Deliberately NOT in SEASONAL_ACCESS: Nepal's trekking calendar has TWO
+  // windows (spring and autumn) split by the summer monsoon, which a single
+  // [start, end] range cannot express — gating them would wrongly mark the
+  // monsoon as open. The seasons are carried by `seasonal_highlights` instead,
+  // so these trails surface in the month filter only for the months that
+  // actually make sense.
+  {
+    trail_id: 209,
+    slug: 'annapurna-circuit',
+    name: 'Annapurna Circuit',
+    country: 'Nepal',
+    region: 'Annapurna',
+    distance_km: 200,
+    duration_hours: 80,
+    route_type: 'Loop',
+    difficulty: 'Hard',
+    difficulty_notes: 'A two-to-three week trek whose crux is Thorong La Pass at 5,416 m — non-technical, but a pre-dawn start, deep cold and thin air make it serious. Total distance ranges from about 160 km to 230 km depending on how much of the road section is walked rather than driven.',
+    elevation_gain_m: 4650,
+    max_elevation_m: 5416,
+    description: 'The classic circuit of the Annapurna massif, climbing from subtropical rice terraces and green forest into the arid, Tibetan-like high country of Manang before crossing Thorong La — one of the great long-distance treks in the world.',
+    photo_url: '/photos/annapurna-circuit-1.jpg',
+    latitude: 28.794600,
+    longitude: 83.938300,
+    status: 'Open',
+    status_last_checked: '2026-07-27',
+    status_source_url: 'https://ntnc.org.np/project/annapurna-conservation-area-project-acap',
+    seasonal_highlights: [
+      {
+        highlight_id: 20901,
+        trail_id: 209,
+        month_start: 3,
+        month_end: 5,
+        tag: 'Rhododendron Bloom',
+        highlight_description: 'Spring warms the valleys and rhododendron forest flowers along the Ghorepani and Tatopani side of the circuit, below about 3,000 m.',
+      },
+      {
+        highlight_id: 20902,
+        trail_id: 209,
+        month_start: 9,
+        month_end: 11,
+        tag: 'Clear Autumn Views',
+        highlight_description: 'The best season: monsoon rain has washed the dust from the air, leaving the clearest skies of the year and the safest, most reliable crossing of Thorong La.',
+      },
+    ],
+  },
+  {
+    trail_id: 210,
+    slug: 'annapurna-base-camp',
+    name: 'Annapurna Base Camp',
+    country: 'Nepal',
+    region: 'Annapurna',
+    distance_km: 110,
+    duration_hours: 45,
+    route_type: 'Out & back',
+    difficulty: 'Hard',
+    difficulty_notes: 'Endless stone staircases climbing and dropping through the valleys, but the high point stays below 4,500 m — meaningfully less altitude risk than Everest Base Camp, which makes it the friendlier of the two classic base-camp treks.',
+    elevation_gain_m: 3300,
+    max_elevation_m: 4130,
+    description: 'A trek into the Annapurna Sanctuary, a glacial amphitheatre ringed by giant peaks, where the trail ends in a 360-degree wall of snow mountains rising straight above the lodges.',
+    photo_url: '/photos/annapurna-base-camp-1.jpg',
+    latitude: 28.530400,
+    longitude: 83.872800,
+    status: 'Open',
+    status_last_checked: '2026-07-27',
+    status_source_url: 'https://ntnc.org.np/project/annapurna-conservation-area-project-acap',
+    seasonal_highlights: [
+      {
+        highlight_id: 21001,
+        trail_id: 210,
+        month_start: 3,
+        month_end: 5,
+        tag: 'Rhododendron Bloom',
+        highlight_description: 'Rhododendron forest flowers on both sides of the trail through the lower valleys — the prettiest the approach ever looks.',
+      },
+      {
+        highlight_id: 21002,
+        trail_id: 210,
+        month_start: 9,
+        month_end: 11,
+        tag: 'Sanctuary Panorama',
+        highlight_description: 'Peak visibility season, when the full 360-degree ring of the Annapurna Sanctuary stands out cleanly from the Base Camp lodges.',
+      },
+    ],
+  },
+  {
+    trail_id: 211,
+    slug: 'everest-base-camp',
+    name: 'Everest Base Camp Trek',
+    country: 'Nepal',
+    region: 'Khumbu (Everest)',
+    distance_km: 130,
+    duration_hours: 65,
+    route_type: 'Out & back',
+    difficulty: 'Hard',
+    difficulty_notes: 'The difficulty is altitude, not terrain — many consecutive days of walking and sleeping in thin air above 4,000 m, with built-in acclimatisation days. Access depends on the Lukla flight, which is weather-dependent.',
+    elevation_gain_m: 2500,
+    max_elevation_m: 5364,
+    description: 'The bucket-list trek through Sherpa country to the foot of the world’s highest mountain, following the Khumbu valley past Namche Bazaar and Tengboche monastery to the glacier below Everest.',
+    photo_url: '/photos/everest-base-camp-1.jpg',
+    latitude: 28.002600,
+    longitude: 86.852600,
+    status: 'Open',
+    status_last_checked: '2026-07-27',
+    status_source_url: 'https://www.dnpwc.gov.np/',
+    seasonal_highlights: [
+      {
+        highlight_id: 21101,
+        trail_id: 211,
+        month_start: 3,
+        month_end: 5,
+        tag: 'Expedition Season',
+        highlight_description: 'Spring is summit season on Everest itself — the real expedition camp stands pitched on the glacier, and temperatures are warmer than autumn.',
+      },
+      {
+        highlight_id: 21102,
+        trail_id: 211,
+        month_start: 9,
+        month_end: 11,
+        tag: 'Clearest Skies',
+        highlight_description: 'The clearest air of the year for the classic view from Kala Patthar back over Base Camp and up the Khumbu Icefall.',
+      },
+    ],
+  },
+  {
+    trail_id: 212,
+    slug: 'everest-view-trek',
+    name: 'Everest View Trek',
+    country: 'Nepal',
+    region: 'Khumbu (Everest)',
+    distance_km: 45,
+    duration_hours: 28,
+    route_type: 'Out & back',
+    difficulty: 'Moderate',
+    difficulty_notes: 'Built for first-timers who want to see Everest without committing to 5,000 m — the climb from Lukla up to Namche is a genuine effort, but the trek turns around well before the altitude gets serious.',
+    elevation_gain_m: 1000,
+    max_elevation_m: 3880,
+    description: 'The short Khumbu trek for people without three spare weeks: up through Namche Bazaar to the terrace of Hotel Everest View, one of the highest hotels in the world, for a straight look at Everest and Ama Dablam.',
+    photo_url: '/photos/everest-view-trek-1.jpg',
+    latitude: 27.818900,
+    longitude: 86.722500,
+    status: 'Open',
+    status_last_checked: '2026-07-27',
+    status_source_url: 'https://www.dnpwc.gov.np/',
+    seasonal_highlights: [
+      {
+        highlight_id: 21201,
+        trail_id: 212,
+        month_start: 3,
+        month_end: 5,
+        tag: 'Spring Flowers',
+        highlight_description: 'Easy walking in mild spring weather, with the Everest view framed by rhododendron in bloom on the lower trail.',
+      },
+      {
+        highlight_id: 21202,
+        trail_id: 212,
+        month_start: 9,
+        month_end: 11,
+        tag: 'Clear Panorama',
+        highlight_description: 'The sharpest, most cloud-free panorama of the year from the Hotel Everest View terrace.',
+      },
+      {
+        highlight_id: 21203,
+        trail_id: 212,
+        month_start: 12,
+        month_end: 2,
+        tag: 'Quiet Winter Views',
+        highlight_description: 'Because it tops out at only 3,880 m, this trek stays workable in winter when the longer Khumbu routes do not — cold, but clear and very quiet.',
+      },
+    ],
+  },
+  {
+    trail_id: 213,
+    slug: 'yala-peak-climb',
+    name: 'Yala Peak Climb',
+    country: 'Nepal',
+    region: 'Langtang',
+    distance_km: 65,
+    duration_hours: 55,
+    route_type: 'Out & back',
+    difficulty: 'Hard',
+    difficulty_notes: 'A non-technical trekking peak — no rock or ice climbing — but summit day still means cold-weather gear, crampons and a long push through snow. Often used as a first Himalayan summit.',
+    elevation_gain_m: 4000,
+    max_elevation_m: 5500,
+    description: 'An excellent introductory trekking peak in the Langtang valley, with a summit view straight across the border to Shishapangma, the only 8,000 m peak entirely inside Tibet.',
+    photo_url: '/photos/yala-peak-climb-1.jpg',
+    latitude: 28.228600,
+    longitude: 85.628000,
+    status: 'Open',
+    status_last_checked: '2026-07-27',
+    status_source_url: 'https://www.dnpwc.gov.np/',
+    seasonal_highlights: [
+      {
+        highlight_id: 21301,
+        trail_id: 213,
+        month_start: 3,
+        month_end: 5,
+        tag: 'Snow Practice',
+        highlight_description: 'Spring snow is in good condition for learning crampon and ice-axe technique, without the deep cold of the winter months.',
+      },
+      {
+        highlight_id: 21302,
+        trail_id: 213,
+        month_start: 9,
+        month_end: 11,
+        tag: 'Shishapangma Views',
+        highlight_description: 'The most stable weather of the year and the clearest summit-day view across to Shishapangma and the Tibetan plateau.',
+      },
+    ],
+  },
+  {
+    trail_id: 214,
+    slug: 'island-peak-climb',
+    name: 'Island Peak (Imja Tse) Climb',
+    country: 'Nepal',
+    region: 'Khumbu (Everest)',
+    distance_km: 160,
+    duration_hours: 90,
+    route_type: 'Out & back',
+    difficulty: 'Hard',
+    difficulty_notes: 'Genuinely technical, unlike the treks here: the headwall before the summit needs crampons, ice-axe technique and fixed ropes, and the approach crosses a crevassed glacier. Requires a climbing permit and a guided rope team.',
+    elevation_gain_m: 3300,
+    max_elevation_m: 6189,
+    description: 'The most popular step up from trekking to real Himalayan mountaineering — a 6,000 m summit deep in the Khumbu, reached on the back of the full Everest Base Camp approach, with Lhotse’s south face towering overhead.',
+    photo_url: '/photos/island-peak-climb-1.jpg',
+    latitude: 27.920700,
+    longitude: 86.935100,
+    status: 'Open',
+    status_last_checked: '2026-07-27',
+    status_source_url: 'https://www.dnpwc.gov.np/',
+    seasonal_highlights: [
+      {
+        highlight_id: 21401,
+        trail_id: 214,
+        month_start: 3,
+        month_end: 5,
+        tag: 'Climbing Season',
+        highlight_description: 'The main climbing window, when glacier crevasses are better bridged and more safely crossed than later in the year.',
+      },
+      {
+        highlight_id: 21402,
+        trail_id: 214,
+        month_start: 9,
+        month_end: 11,
+        tag: 'Stable Autumn Air',
+        highlight_description: 'Settled, still conditions and the finest summit views of the season out over the Khumbu giants.',
+      },
+    ],
+  },
 ]
 
 export const MONTH_NAMES = [
@@ -6779,6 +7046,7 @@ export const ICONIC_TRAIL_IDS = new Set([
   160, 162, 166, // South Korea (v3): Dinosaur Ridge (Seoraksan), Jirisan main-ridge traverse, Naejangsan nine-peaks
   173, 181, 182, 183, 187, 188, 193, // Taiwan: Syakaro, Dabajianshan, North Dawu, Jiaming Lake, Hehuan Jianshan, Hehuanshan East, Alishan Giant Trees
   196, 197, 198, 200, 203, 207, // Taiwan (NP): Yushan, Xueshan, Holy Ridge, Qilai, Zhuilu Old Trail, Elephant Mountain
+  209, 210, 211, // Nepal: Annapurna Circuit, Annapurna Base Camp, Everest Base Camp
 ])
 
 export function isIconic(trail) {
