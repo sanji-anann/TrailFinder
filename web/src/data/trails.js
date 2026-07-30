@@ -7250,6 +7250,16 @@ export function isYearRound(trail) {
   return !(trail.trail_id in SEASONAL_ACCESS)
 }
 
+// True when a seasonally-gated trail is shut in `month` (1-12, defaulting to
+// the real current month). This is separate from `status`, which records only
+// exceptional closures (landslides, earthquakes, volcanic gas) — a trail can
+// sit at status 'Open' all year and still be closed today because its access
+// window has ended, so anything showing the status must consult this too.
+export function isOutOfSeason(trail, month = new Date().getMonth() + 1) {
+  const window = SEASONAL_ACCESS[trail.trail_id]
+  return window ? !monthInRange(month, window[0], window[1]) : false
+}
+
 // Set of months (1-12) the trail is open/accessible.
 export function openMonths(trail) {
   const months = new Set()

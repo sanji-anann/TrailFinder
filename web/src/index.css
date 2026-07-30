@@ -1720,6 +1720,13 @@ main {
   padding: 3px 10px;
 }
 
+/* Outside the window the pill states when the trail reopens, so reassuring
+   green would contradict the "Seasonally Closed" badge beside it. */
+.open-window-tag.off-season {
+  color: var(--trail-gold);
+  background: rgba(201, 138, 42, 0.14);
+}
+
 .month-legend {
   display: flex;
   gap: 14px;

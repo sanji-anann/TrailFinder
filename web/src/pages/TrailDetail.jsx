@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { trails, isYearRound, openRangeLabel } from '../data/trails'
+import { trails, isYearRound, openRangeLabel, isOutOfSeason } from '../data/trails'
 import { TRAIL_PHOTOS } from '../data/trailPhotos'
 import StatusBadge from '../components/StatusBadge'
 import SeasonalHighlightTag from '../components/SeasonalHighlightTag'
@@ -44,6 +44,8 @@ export default function TrailDetail() {
     )
   }
 
+  // No month picker on this page, so the badge speaks about today.
+  const outOfSeason = isOutOfSeason(trail)
   const photos = TRAIL_PHOTOS[trail.trail_id] ?? []
   const prevPhoto = () => setActivePhoto((i) => (i - 1 + photos.length) % photos.length)
   const nextPhoto = () => setActivePhoto((i) => (i + 1) % photos.length)
@@ -116,8 +118,8 @@ export default function TrailDetail() {
       </div>
 
       <div className="trail-detail-status">
-        <StatusBadge status={trail.status} />
-        <span className="open-window-tag">
+        <StatusBadge status={trail.status} outOfSeason={outOfSeason} />
+        <span className={`open-window-tag${outOfSeason ? ' off-season' : ''}`}>
           {isYearRound(trail) ? 'Open year-round' : `Open ${openRangeLabel(trail)}`}
         </span>
         <span className="caption">Checked {trail.status_last_checked}</span>
