@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import StatusBadge from './StatusBadge'
 import SeasonalHighlightTag from './SeasonalHighlightTag'
 import MonthBar from './MonthBar'
-import { MONTH_NAMES, isTrailInMonth, highlightsForMonth, isYearRound, openRangeLabel } from '../data/trails'
+import { MONTH_NAMES, isTrailInMonth, highlightsForMonth, isYearRound, openRangeLabel, isOutOfSeason } from '../data/trails'
 
 const STATUS_TINTS = {
   // Open trails show the photo untinted; the gold/red tints stay as a
@@ -23,6 +23,9 @@ export default function TrailCard({ trail, highlight, month }) {
     (month != null ? highlightsForMonth(trail, month)[0] : null) ??
     trail.seasonal_highlights[0]
   const tint = STATUS_TINTS[trail.status] ?? STATUS_TINTS.Open
+  // In season-lens mode the badge answers "could I walk it in the month I
+  // picked?"; with no month picked it falls back to today.
+  const outOfSeason = isOutOfSeason(trail, month ?? undefined)
 
   return (
     <Link to={`/trail/${trail.slug}`} className="trail-card">
@@ -43,7 +46,7 @@ export default function TrailCard({ trail, highlight, month }) {
       <div className="trail-card-body">
         <div className="trail-card-top">
           <h3>{trail.name}</h3>
-          <StatusBadge status={trail.status} />
+          <StatusBadge status={trail.status} outOfSeason={outOfSeason} />
         </div>
         <p className="trail-card-location">{trail.region} · {trail.country}</p>
 
