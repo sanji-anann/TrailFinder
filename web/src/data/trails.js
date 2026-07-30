@@ -2,7 +2,14 @@
 // match Database.md's Trails + Seasonal Highlights schema.
 //
 // Covers Australia, New Zealand, Japan, Malaysia, Thailand, Iceland, South Korea,
-// Taiwan and Nepal.
+// Taiwan, Nepal, Chile and Argentina.
+//
+// SOUTH AMERICA (trail_ids 215–217) are not from AllTrails — they were written
+// from the managing park authorities' own pages (CONAF for Torres del Paine,
+// Mendoza province for Aconcagua), which is also where their seasonal closures
+// come from. Photos are self-hosted Creative Commons images from Wikimedia
+// Commons (see trailPhotos.js), and they carry no `alltrails_url`. See the SOUTH
+// AMERICA section header lower in this file.
 //
 // NEPAL (trail_ids 209–214) are not from AllTrails — they were translated from a
 // curated Thai-language trekking CSV and enriched with sourced coordinates and
@@ -7027,6 +7034,143 @@ export const trails = [
       },
     ],
   },
+
+  // ── SOUTH AMERICA (trail_ids 215–217) ───────────────────────────────────────
+  // Hand-authored from the park authorities' own pages, not AllTrails, so these
+  // carry no `alltrails_url`. Coordinates are the defining point of each route
+  // (the Mirador Base Las Torres, Paso John Garner, the Aconcagua summit),
+  // taken from OpenStreetMap; the two Torres del Paine routes deliberately do
+  // NOT share a pin, so the map distinguishes them.
+  //
+  // Distance and duration are the classic full-route figures — published
+  // distances for the W range from about 71 km to 100 km depending on which
+  // side-trips are counted, and `duration_hours` follows the rest of this file
+  // in meaning moving hours, not elapsed days, with the trip length in
+  // `difficulty_notes`.
+  //
+  // All three are in SEASONAL_ACCESS. Torres del Paine is NOT open year-round,
+  // which is easy to get wrong: CONAF closes the Sendero W outright in June and
+  // July, and the Macizo Paine (O) circuit from May until the end of October.
+  // Aconcagua's park season runs 15 Nov – 31 Mar. Per the convention above,
+  // `status` describes exceptional closures only, so these stay 'Open' with the
+  // seasonal window carried in SEASONAL_ACCESS and the caveat in the notes.
+  {
+    trail_id: 215,
+    slug: 'torres-del-paine-w-trek',
+    name: 'Torres del Paine (W Trek)',
+    country: 'Chile',
+    region: 'Magallanes',
+    distance_km: 80,
+    duration_hours: 32,
+    route_type: 'Point to point',
+    difficulty: 'Hard',
+    difficulty_notes: 'Four to five days of hut-to-hut or camp-to-camp walking, with a steep rocky scramble to the Mirador Base Las Torres and notoriously violent Patagonian wind on the exposed sections. CONAF closes the W in June and July, and requires an authorised guide on the Base Torres trail from 27 April to 30 August.',
+    elevation_gain_m: 3000,
+    max_elevation_m: 880,
+    description: 'The iconic W-shaped route through the Paine massif, linking the granite towers above their glacial lake, the hanging glaciers of the Valle del Francés, and the face of Grey Glacier.',
+    photo_url: '/photos/torres-del-paine-w-trek-1.jpg',
+    latitude: -50.942700,
+    longitude: -72.949700,
+    status: 'Open',
+    status_last_checked: '2026-07-30',
+    status_source_url: 'https://www.conaf.cl/parque_nacionales/parque-nacional-torres-del-paine/',
+    seasonal_highlights: [
+      {
+        highlight_id: 21501,
+        trail_id: 215,
+        month_start: 11,
+        month_end: 3,
+        tag: 'Patagonian Summer',
+        highlight_description: 'Up to 17 hours of daylight, every refugio and campsite open, and the warmest walking of the year — also the windiest and busiest.',
+      },
+      {
+        highlight_id: 21502,
+        trail_id: 215,
+        month_start: 4,
+        month_end: 5,
+        tag: 'Autumn Lenga Colour',
+        highlight_description: 'The lenga beech forest turns deep red and orange, the wind drops and the crowds thin — the last window before the trail closes for winter.',
+      },
+    ],
+  },
+  {
+    trail_id: 216,
+    slug: 'torres-del-paine-o-circuit',
+    name: 'O Circuit (Torres del Paine)',
+    country: 'Chile',
+    region: 'Magallanes',
+    distance_km: 136,
+    duration_hours: 60,
+    route_type: 'Loop',
+    difficulty: 'Hard',
+    difficulty_notes: 'Seven to nine days carrying a full pack, self-sufficient across the remote northern back-country, with the crux at Paso John Garner — a snow-patched pass swept by the wind coming off the Southern Patagonian Ice Field. CONAF closes the circuit from May until the end of October and controls entry by reservation.',
+    elevation_gain_m: 4200,
+    max_elevation_m: 1200,
+    description: 'The full loop around the Paine massif, adding the wild, near-empty northern back-country to the W and crossing Paso John Garner for the view out over the Southern Patagonian Ice Field.',
+    photo_url: '/photos/torres-del-paine-o-circuit-1.jpg',
+    latitude: -50.941100,
+    longitude: -73.184200,
+    status: 'Open',
+    status_last_checked: '2026-07-30',
+    status_source_url: 'https://www.conaf.cl/parque_nacionales/parque-nacional-torres-del-paine/',
+    seasonal_highlights: [
+      {
+        highlight_id: 21601,
+        trail_id: 216,
+        month_start: 11,
+        month_end: 3,
+        tag: 'Pass Crossing Window',
+        highlight_description: 'The months when Paso John Garner is reliably passable, opening the long descent alongside Grey Glacier and its suspension bridges.',
+      },
+      {
+        highlight_id: 21602,
+        trail_id: 216,
+        month_start: 12,
+        month_end: 2,
+        tag: 'Firebush & Guanaco',
+        highlight_description: 'Chilean firebush flowers scarlet along the lower valleys, and guanaco are active and easy to spot on the open steppe.',
+      },
+    ],
+  },
+  {
+    trail_id: 217,
+    slug: 'aconcagua-normal-route',
+    name: 'Aconcagua (Normal Route)',
+    country: 'Argentina',
+    region: 'Mendoza',
+    distance_km: 72,
+    duration_hours: 70,
+    route_type: 'Out & back',
+    difficulty: 'Hard',
+    difficulty_notes: 'Not a hike: a 12-to-18-day high-altitude expedition with load carries between camps, summit day above 6,900 m in sub-zero cold, real risk of acute mountain sickness, and the viento blanco — the white wind — that shuts the mountain down for days. Non-technical underfoot, but a permit from Mendoza province and full mountaineering kit are compulsory.',
+    elevation_gain_m: 4020,
+    max_elevation_m: 6961,
+    description: 'The standard, non-technical expedition route up the Quebrada de Horcones to the highest summit outside Asia — the roof of both the Western and Southern Hemispheres.',
+    photo_url: '/photos/aconcagua-normal-route-1.jpg',
+    latitude: -32.653100,
+    longitude: -70.011900,
+    status: 'Open',
+    status_last_checked: '2026-07-30',
+    status_source_url: 'https://informacionoficial.mendoza.gob.ar/energiayambiente/aconcagua/',
+    seasonal_highlights: [
+      {
+        highlight_id: 21701,
+        trail_id: 217,
+        month_start: 12,
+        month_end: 2,
+        tag: 'Expedition Season',
+        highlight_description: 'The heart of the permit season: rangers on the mountain, Plaza de Mulas base camp fully pitched, and the least brutal high-altitude temperatures of the year.',
+      },
+      {
+        highlight_id: 21702,
+        trail_id: 217,
+        month_start: 1,
+        month_end: 1,
+        tag: 'Peak Summit Window',
+        highlight_description: 'January statistically brings the most settled weather and the best snow and ice conditions for a summit push.',
+      },
+    ],
+  },
 ]
 
 export const MONTH_NAMES = [
@@ -7047,6 +7191,7 @@ export const ICONIC_TRAIL_IDS = new Set([
   173, 181, 182, 183, 187, 188, 193, // Taiwan: Syakaro, Dabajianshan, North Dawu, Jiaming Lake, Hehuan Jianshan, Hehuanshan East, Alishan Giant Trees
   196, 197, 198, 200, 203, 207, // Taiwan (NP): Yushan, Xueshan, Holy Ridge, Qilai, Zhuilu Old Trail, Elephant Mountain
   209, 210, 211, // Nepal: Annapurna Circuit, Annapurna Base Camp, Everest Base Camp
+  215, 216, 217, // South America: Torres del Paine W Trek, O Circuit, Aconcagua
 ])
 
 export function isIconic(trail) {
@@ -7095,6 +7240,10 @@ export const SEASONAL_ACCESS = {
   128: [9, 2], 129: [10, 2], 130: [11, 2], 131: [9, 1], 132: [2, 4],
   133: [11, 2], 134: [10, 2], 135: [10, 2], 136: [11, 2], 137: [11, 2],
   172: [5, 2], // Doi Khun Tan — closes annually 1 Mar–30 Apr
+  // South America, from the park authorities' own closure notices (2026-07-30):
+  // CONAF closes the Sendero W in June and July, and the Macizo Paine (O)
+  // circuit from May until 31 October. Aconcagua's season is 15 Nov – 31 Mar.
+  215: [8, 5], 216: [11, 4], 217: [11, 3],
 }
 
 export function isYearRound(trail) {

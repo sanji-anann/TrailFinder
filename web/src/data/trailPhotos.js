@@ -5,6 +5,8 @@
 // Taiwan trails (173–195) instead use official photos from each trail's
 // Forestry Agency detail page (recreation.forest.gov.tw), reused under
 // Taiwan's Open Government Data License; source URL recorded per entry.
+// Despite the header above there is no generator in the repo — this file is
+// hand-edited.
 export const TRAIL_PHOTOS = {
   88: [
     { url: '/photos/laugavegur-trail-1.jpg', caption: 'Rhyolite hills on the Laugavegur', credit: 'Michal Klajban', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Laugavegur_hiking_trail,_Iceland_03.jpg' },
@@ -628,5 +630,28 @@ export const TRAIL_PHOTOS = {
     { url: '/photos/island-peak-climb-1.jpg', caption: 'On the summit ridge of Island Peak', credit: 'Mountaineer', license: 'CC BY 3.0', source: 'https://commons.wikimedia.org/wiki/File:Summitting_Island_Peak.jpg' },
     { url: '/photos/island-peak-climb-2.jpg', caption: 'Glaciers below Island Peak', credit: 'McKay Savage', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:Nepal_-_Island_Peak_-_008_-_Merging_Glaciers_far_below_(497820799).jpg' },
     { url: '/photos/island-peak-climb-3.jpg', caption: 'Imja Tse (Island Peak)', credit: 'Alonzo Lyons', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Alonzo-lyons-imja-tse-island-peak-nepal-DSCN6013.jpg' },
+  ],
+  // South America (215–217), Wikimedia Commons. After the hero shot, the photos
+  // follow the trail's seasonal_highlights in order, so the gallery shows what
+  // each highlight is talking about: for 215 the same Valle del Francés
+  // viewpoint in summer and then in autumn, both by the same photographer.
+  215: [
+    { url: '/photos/torres-del-paine-w-trek-1.jpg', caption: 'Mirador Base Las Torres, the high point of the W', credit: 'Wayfool', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Mirador_las_Torres.jpg' },
+    { url: '/photos/torres-del-paine-w-trek-2.jpg', caption: 'The three towers above their glacial lake', credit: 'Felipedd', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:Torres_del_Paine_(Mirador).jpg' },
+    { url: '/photos/torres-del-paine-w-trek-3.jpg', caption: 'Valle del Francés in summer', credit: 'Yiyo Zamorano', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Valle_franc%C3%A9s_en_verano.jpg' },
+    { url: '/photos/torres-del-paine-w-trek-4.jpg', caption: 'The same valley in autumn, the lenga forest turned red', credit: 'Yiyo Zamorano', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Valle_franc%C3%A9s_en_oto%C3%B1o.jpg' },
+  ],
+  216: [
+    { url: '/photos/torres-del-paine-o-circuit-1.jpg', caption: 'Suspension bridge above Grey Glacier, below Paso John Garner', credit: 'juan rojas farias', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Puente_colgante_,_parque_torres_del_paine_2016.jpg' },
+    { url: '/photos/torres-del-paine-o-circuit-2.jpg', caption: 'Walking the shore of Lago Grey', credit: 'Mimartinez (WMCL)', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Glaciar_Grey_en_Torres_del_Paine,_Chile.jpg' },
+    { url: '/photos/torres-del-paine-o-circuit-3.jpg', caption: 'Chilean firebush in flower in the park', credit: 'Paweł Drozd', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:Embothrium_coccineum_001.jpg' },
+    { url: '/photos/torres-del-paine-o-circuit-4.jpg', caption: 'Guanaco on the steppe, Torres del Paine', credit: 'Thomas Fuhrmann', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Guanaco_(Lama_guanicoe)_-_Torres_del_Paine_National_Park_26.jpg' },
+  ],
+  // 217's hero shows the lenticular cloud that signals the viento blanco named
+  // in the trail's difficulty_notes.
+  217: [
+    { url: '/photos/aconcagua-normal-route-1.jpg', caption: 'Aconcagua under a lenticular cloud', credit: 'Viviana Pinto', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Cumbre_Aconcagua.jpg' },
+    { url: '/photos/aconcagua-normal-route-2.jpg', caption: 'Laguna de Horcones at the park entrance, the route’s start', credit: 'Daniel P. Gauer', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:Laguna_de_Horcones_y_Aconcagua_(20878146773).jpg' },
+    { url: '/photos/aconcagua-normal-route-3.jpg', caption: 'Plaza de Mulas base camp in February', credit: 'Radu Vatcu', license: 'CC BY 2.5', source: 'https://commons.wikimedia.org/wiki/File:Plaza_de_Mulas_2008-02-05.JPG' },
   ],
 }
