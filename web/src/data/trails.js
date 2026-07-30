@@ -3,7 +3,14 @@
 //
 // Covers Australia, New Zealand, Japan, Malaysia, Thailand, Iceland, South Korea,
 // Taiwan, Nepal, Italy, Spain, France, Croatia, the United Kingdom,
-// Switzerland, Chile and Argentina.
+// Switzerland, Chile, Argentina and the United States.
+//
+// UNITED STATES (trail_ids 226–227) are not from AllTrails — they were written
+// from the National Park Service's own pages and, for the Wind River High Route,
+// from Andrew Skurka's route guide. Photos are self-hosted Creative Commons and
+// US-government public-domain images from Wikimedia Commons (see trailPhotos.js),
+// and they carry no `alltrails_url`. See the NORTH AMERICA section header lower
+// in this file.
 //
 // SOUTH AMERICA (trail_ids 223–225) are not from AllTrails — they were written
 // from the managing park authorities' own pages (CONAF for Torres del Paine,
@@ -7475,6 +7482,102 @@ export const trails = [
       },
     ],
   },
+
+  // ── NORTH AMERICA (trail_ids 226–227) ───────────────────────────────────────
+  // Hand-authored, not from AllTrails, so like the Nepal and South America sets
+  // these carry no `alltrails_url`. The JMT's figures are the National Park
+  // Service's and Wikipedia's; the Wind River High Route's come from Andrew
+  // Skurka, who established the route and publishes the only guide to it, since
+  // no agency describes it as a named route at all.
+  //
+  // The WRHR is a *route*, not a trail — about two thirds of it is cross-country
+  // — so it has no waymarking and no geojson sidecar, and its pin is the Titcomb
+  // Basin trail through the heart of the route (OpenStreetMap) rather than a
+  // terminus. The JMT's pin is its northern terminus at Happy Isles.
+  //
+  // `duration_hours` follows the rest of this file in meaning moving hours, not
+  // elapsed days, with the trip length in `difficulty_notes`. Both are in
+  // SEASONAL_ACCESS: the Sierra and the Winds are snowbound outside a short
+  // mid-summer window, and per the convention above `status` records only
+  // exceptional closures, so both stay 'Open'.
+  {
+    trail_id: 226,
+    slug: 'wind-river-high-route',
+    name: 'Wind River High Route',
+    country: 'United States',
+    region: 'Wyoming',
+    distance_km: 156.0,
+    duration_hours: 70.0,
+    difficulty: 'Hard',
+    difficulty_notes: 'Seven to ten days, two thirds of it off-trail: unmarked cross-country navigation over talus and boulder fields, Class 3 scrambling on nine alpine passes, and glacier crossings that want microspikes and an ice axe. No huts, no resupply, and no route to follow but your own.',
+    elevation_gain_m: 9150,
+    max_elevation_m: 4071,
+    description: 'A mostly off-trail traverse of the granite spine of Wyoming’s Wind River Range, bookended by two 13,000-foot summits and threading the alpine basins, glaciers and spires above the treeline.',
+    photo_url: '/photos/wind-river-high-route-1.jpg',
+    latitude: 43.1117,
+    longitude: -109.6359,
+    status: 'Open',
+    status_last_checked: '2026-07-30',
+    status_source_url: 'https://www.fs.usda.gov/r04/bridger-teton/recreation/bridger-wilderness',
+    route_type: 'Point to point',
+    seasonal_highlights: [
+      {
+        highlight_id: 22601,
+        trail_id: 226,
+        month_start: 7,
+        month_end: 8,
+        tag: 'Wildflower Basins',
+        highlight_description: 'The passes shed their deep snowpack and the tundra basins flower — the only dependable window for the cross-country sections.',
+      },
+      {
+        highlight_id: 22602,
+        trail_id: 226,
+        month_start: 9,
+        month_end: 9,
+        tag: 'Crisp Air & Frost',
+        highlight_description: 'Freezing nights end the mosquitoes and the air turns sharp and clear, though the first snows can shut the high passes without warning.',
+      },
+    ],
+  },
+  {
+    trail_id: 227,
+    slug: 'john-muir-trail',
+    name: 'John Muir Trail',
+    country: 'United States',
+    region: 'California (Sierra Nevada)',
+    distance_km: 344.0,
+    duration_hours: 140.0,
+    difficulty: 'Hard',
+    difficulty_notes: 'Around three weeks of high-altitude walking, much of it above 3,000 m and over ten passes, finishing up Mount Whitney. Bear canisters are compulsory, resupply means detouring off the trail, and the wilderness permit quota over Donohue Pass is the hardest part to get.',
+    elevation_gain_m: 14300,
+    max_elevation_m: 4421,
+    description: 'America’s most celebrated wilderness trail, running the length of the High Sierra from Yosemite Valley through the Ansel Adams Wilderness, Kings Canyon and Sequoia to the summit of Mount Whitney.',
+    photo_url: '/photos/john-muir-trail-1.jpg',
+    latitude: 37.7317,
+    longitude: -119.5587,
+    status: 'Open',
+    status_last_checked: '2026-07-30',
+    status_source_url: 'https://www.nps.gov/yose/planyourvisit/jmt.htm',
+    route_type: 'Point to point',
+    seasonal_highlights: [
+      {
+        highlight_id: 22701,
+        trail_id: 227,
+        month_start: 7,
+        month_end: 8,
+        tag: 'Meltwater & Meadows',
+        highlight_description: 'Snowmelt keeps the Merced and the Tuolumne running hard, and the high meadows flower once the passes clear.',
+      },
+      {
+        highlight_id: 22702,
+        trail_id: 227,
+        month_start: 9,
+        month_end: 10,
+        tag: 'Settled Skies & Reflections',
+        highlight_description: 'Afternoon thunderstorms give way to long settled spells, and the alpine tarns go still enough to mirror the granite at sunset.',
+      },
+    ],
+  },
 ]
 
 export const MONTH_NAMES = [
@@ -7496,6 +7599,7 @@ export const ICONIC_TRAIL_IDS = new Set([
   196, 197, 198, 200, 203, 207, // Taiwan (NP): Yushan, Xueshan, Holy Ridge, Qilai, Zhuilu Old Trail, Elephant Mountain
   209, 210, 211, // Nepal: Annapurna Circuit, Annapurna Base Camp, Everest Base Camp
   223, 224, 225, // South America: Torres del Paine W Trek, O Circuit, Aconcagua
+  226, 227, // United States: Wind River High Route, John Muir Trail
 ])
 
 export function isIconic(trail) {
@@ -7553,6 +7657,10 @@ export const SEASONAL_ACCESS = {
   // CONAF closes the Sendero W in June and July, and the Macizo Paine (O)
   // circuit from May until 31 October. Aconcagua's season is 15 Nov – 31 Mar.
   223: [8, 5], 224: [11, 4], 225: [11, 3],
+  // United States — both are snowbound either side of the Sierra/Wind River
+  // summer. Skurka gives the WRHR window as August to mid-September, or from
+  // mid-July after a dry winter; the NPS gives the JMT's as July to September.
+  226: [7, 9], 227: [7, 9],
 }
 
 export function isYearRound(trail) {
