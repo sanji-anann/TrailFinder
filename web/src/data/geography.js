@@ -11,6 +11,12 @@ export const COUNTRY_TO_CONTINENT = {
   Taiwan: 'Asia',
   Nepal: 'Asia',
   Iceland: 'Europe',
+  Italy: 'Europe',
+  Spain: 'Europe',
+  France: 'Europe',
+  Croatia: 'Europe',
+  'United Kingdom': 'Europe',
+  Switzerland: 'Europe',
   Chile: 'South America',
   Argentina: 'South America',
 }

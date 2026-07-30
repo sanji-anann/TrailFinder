@@ -1,12 +1,12 @@
-// AUTO-GENERATED — do not edit by hand.
+// AUTO-GENERATED — do not edit by hand, EXCEPT the Europe entries (216–), which
+// were added manually; there is no generator script in the repo to regenerate
+// them from.
 // Iconic-trail photo galleries. Images are self-hosted in web/public/photos/,
 // sourced from Wikimedia Commons under the Creative Commons / public-domain
 // licences recorded in each entry (credit + license + source file page).
 // Taiwan trails (173–195) instead use official photos from each trail's
 // Forestry Agency detail page (recreation.forest.gov.tw), reused under
 // Taiwan's Open Government Data License; source URL recorded per entry.
-// Despite the header above there is no generator in the repo — this file is
-// hand-edited.
 export const TRAIL_PHOTOS = {
   88: [
     { url: '/photos/laugavegur-trail-1.jpg', caption: 'Rhyolite hills on the Laugavegur', credit: 'Michal Klajban', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Laugavegur_hiking_trail,_Iceland_03.jpg' },
@@ -631,25 +631,62 @@ export const TRAIL_PHOTOS = {
     { url: '/photos/island-peak-climb-2.jpg', caption: 'Glaciers below Island Peak', credit: 'McKay Savage', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:Nepal_-_Island_Peak_-_008_-_Merging_Glaciers_far_below_(497820799).jpg' },
     { url: '/photos/island-peak-climb-3.jpg', caption: 'Imja Tse (Island Peak)', credit: 'Alonzo Lyons', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Alonzo-lyons-imja-tse-island-peak-nepal-DSCN6013.jpg' },
   ],
-  // South America (215–217), Wikimedia Commons. After the hero shot, the photos
-  // follow the trail's seasonal_highlights in order, so the gallery shows what
-  // each highlight is talking about: for 215 the same Valle del Francés
-  // viewpoint in summer and then in autumn, both by the same photographer.
   215: [
+    { url: '/photos/cinque-terre-sentiero-azzurro-1.jpg', caption: 'Spring Wildflowers & Mild Weather — the path between Riomaggiore and Campiglia', credit: 'Davide Mauro', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Vigneti_tra_Riomaggiore_e_Campiglia_01.jpg' },
+    { url: '/photos/cinque-terre-sentiero-azzurro-2.jpg', caption: 'Grape Harvest Season — Vernazza and its terraces in September', credit: 'Nucleosynth', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Vernazza_from_the_Sentiero_Azzuro_20190912.jpg' },
+  ],
+  216: [
+    { url: '/photos/camino-de-santiago-frances-1.jpg', caption: 'A pilgrim crossing the Meseta', credit: 'Rocco Rossi', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:Camino_de_Santiago_(5364961214).jpg' },
+    { url: '/photos/camino-de-santiago-frances-2.jpg', caption: 'Optimal Pilgrim Season — walking out of Logroño through the spring vines', credit: 'Manuel Velazquez', license: 'CC BY 3.0', source: 'https://commons.wikimedia.org/wiki/File:VI%C3%91EDOS_Y_PEREGRINOS_A_LA_SALIDA_DE_LOGRO%C3%91O_-_panoramio.jpg' },
+    { url: '/photos/camino-de-santiago-frances-3.jpg', caption: 'Autumn Colors — the vineyards of La Rioja at Briñas', credit: 'Shaury', license: 'CC BY-SA 2.0', source: 'https://commons.wikimedia.org/wiki/File:Vi%C3%B1edos_en_Bri%C3%B1as.jpg' },
+  ],
+  217: [
+    { url: '/photos/tour-du-mont-blanc-1.jpg', caption: 'Alpine Flora & Open Passes — the Col de la Seigne in late July', credit: 'Rémih', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Col_de_la_Seigne_Col_de_Mya.jpg' },
+    { url: '/photos/tour-du-mont-blanc-2.jpg', caption: 'Lac Blanc above Chamonix, snow-free in August', credit: 'Tiia Monto', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:Chamonix_-_Lac_Blanc_4.jpg' },
+  ],
+  218: [
+    { url: '/photos/gr20-corsica-1.jpg', caption: 'Snow-Free Passes — dry granite at the Aiguilles de Bavella in June', credit: 'Rémih', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Aiguilles_de_Bavella_Bocca_Stazzunara.jpg' },
+    { url: '/photos/gr20-corsica-2.jpg', caption: 'The pozzines and grazing herds at Lac de Nino', credit: 'Rémih', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Lac_de_Nino_Capu_a_e_Furcelle.jpg' },
+  ],
+  219: [
+    { url: '/photos/plitvice-lakes-trail-1.jpg', caption: 'Peak Water Flow — the falls in full June spate', credit: 'Andro Galinovic', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Andro_Galinovic_-_Plitvice_falls_1.jpg' },
+    { url: '/photos/plitvice-lakes-trail-2.jpg', caption: 'Autumn Foliage Reflection — the lakes in October', credit: 'Malcolm Carlaw', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:Cooling_the_Fire.jpg' },
+  ],
+  220: [
+    { url: '/photos/west-highland-way-1.jpg', caption: 'Low Midges & Long Daylight — Loch Lomond from Conic Hill in May', credit: 'Tim Heaton', license: 'CC BY-SA 2.0', source: 'https://commons.wikimedia.org/wiki/File:Loch_Lomond_from_Conic_Hill_-_geograph.org.uk_-_4013605.jpg' },
+    { url: '/photos/west-highland-way-2.jpg', caption: 'Buachaille Etive Mòr above Rannoch Moor, late May', credit: 'Michael Graham', license: 'CC BY-SA 2.0', source: 'https://commons.wikimedia.org/wiki/File:Looking_towards_Buachaille_Etive_Mor_-_geograph.org.uk_-_2975922.jpg' },
+  ],
+  // 221's second photo is the enrosadira at Rifugio Bolzano, on the Sciliar rather
+  // than on the Alta Via 1 itself — kept because it is the only Commons image that
+  // shows both halves of the highlight (an open rifugio and the pink glow), and the
+  // caption names the hut so it does not read as a shot of this trail.
+  221: [
+    { url: '/photos/alta-via-1-dolomites-1.jpg', caption: 'Rifugio Season — the Averau seen from Rifugio Nuvolau in July', credit: 'jokin.lacalle', license: 'CC BY 4.0', source: 'https://commons.wikimedia.org/wiki/File:View_from_Rifugio_Nuvolau.jpg' },
+    { url: '/photos/alta-via-1-dolomites-2.jpg', caption: 'Enrosadira — sunset on the Catinaccio from Rifugio Bolzano', credit: 'Anna Marchenkova', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Tramonto_al_rifugio_Bolzano_(cropped).jpg' },
+  ],
+  222: [
+    { url: '/photos/walkers-haute-route-1.jpg', caption: 'High Pass Accessibility — Lac de Moiry and its glacier in August', credit: 'Christian David', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Barrage_de_Moiry.jpg' },
+    { url: '/photos/walkers-haute-route-2.jpg', caption: 'The Matterhorn above Zermatt, where the route ends', credit: 'Robertuswiki', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Matterhorn_Riffelsee_Spiegelung.jpg' },
+  ],
+  // South America (223–225), Wikimedia Commons. After the hero shot the photos
+  // follow the trail's seasonal_highlights in order, so the gallery shows what
+  // each highlight is talking about: for 223 the same Valle del Francés
+  // viewpoint in summer and then in autumn, both by the same photographer.
+  223: [
     { url: '/photos/torres-del-paine-w-trek-1.jpg', caption: 'Mirador Base Las Torres, the high point of the W', credit: 'Wayfool', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Mirador_las_Torres.jpg' },
     { url: '/photos/torres-del-paine-w-trek-2.jpg', caption: 'The three towers above their glacial lake', credit: 'Felipedd', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:Torres_del_Paine_(Mirador).jpg' },
     { url: '/photos/torres-del-paine-w-trek-3.jpg', caption: 'Valle del Francés in summer', credit: 'Yiyo Zamorano', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Valle_franc%C3%A9s_en_verano.jpg' },
     { url: '/photos/torres-del-paine-w-trek-4.jpg', caption: 'The same valley in autumn, the lenga forest turned red', credit: 'Yiyo Zamorano', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Valle_franc%C3%A9s_en_oto%C3%B1o.jpg' },
   ],
-  216: [
+  224: [
     { url: '/photos/torres-del-paine-o-circuit-1.jpg', caption: 'Suspension bridge above Grey Glacier, below Paso John Garner', credit: 'juan rojas farias', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Puente_colgante_,_parque_torres_del_paine_2016.jpg' },
     { url: '/photos/torres-del-paine-o-circuit-2.jpg', caption: 'Walking the shore of Lago Grey', credit: 'Mimartinez (WMCL)', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Glaciar_Grey_en_Torres_del_Paine,_Chile.jpg' },
     { url: '/photos/torres-del-paine-o-circuit-3.jpg', caption: 'Chilean firebush in flower in the park', credit: 'Paweł Drozd', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:Embothrium_coccineum_001.jpg' },
     { url: '/photos/torres-del-paine-o-circuit-4.jpg', caption: 'Guanaco on the steppe, Torres del Paine', credit: 'Thomas Fuhrmann', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Guanaco_(Lama_guanicoe)_-_Torres_del_Paine_National_Park_26.jpg' },
   ],
-  // 217's hero shows the lenticular cloud that signals the viento blanco named
+  // 225's hero shows the lenticular cloud that signals the viento blanco named
   // in the trail's difficulty_notes.
-  217: [
+  225: [
     { url: '/photos/aconcagua-normal-route-1.jpg', caption: 'Aconcagua under a lenticular cloud', credit: 'Viviana Pinto', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Cumbre_Aconcagua.jpg' },
     { url: '/photos/aconcagua-normal-route-2.jpg', caption: 'Laguna de Horcones at the park entrance, the route’s start', credit: 'Daniel P. Gauer', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:Laguna_de_Horcones_y_Aconcagua_(20878146773).jpg' },
     { url: '/photos/aconcagua-normal-route-3.jpg', caption: 'Plaza de Mulas base camp in February', credit: 'Radu Vatcu', license: 'CC BY 2.5', source: 'https://commons.wikimedia.org/wiki/File:Plaza_de_Mulas_2008-02-05.JPG' },

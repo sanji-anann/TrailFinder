@@ -2,9 +2,10 @@
 // match Database.md's Trails + Seasonal Highlights schema.
 //
 // Covers Australia, New Zealand, Japan, Malaysia, Thailand, Iceland, South Korea,
-// Taiwan, Nepal, Chile and Argentina.
+// Taiwan, Nepal, Italy, Spain, France, Croatia, the United Kingdom,
+// Switzerland, Chile and Argentina.
 //
-// SOUTH AMERICA (trail_ids 215–217) are not from AllTrails — they were written
+// SOUTH AMERICA (trail_ids 223–225) are not from AllTrails — they were written
 // from the managing park authorities' own pages (CONAF for Torres del Paine,
 // Mendoza province for Aconcagua), which is also where their seasonal closures
 // come from. Photos are self-hosted Creative Commons images from Wikimedia
@@ -7035,7 +7036,310 @@ export const trails = [
     ],
   },
 
-  // ── SOUTH AMERICA (trail_ids 215–217) ───────────────────────────────────────
+  // ── EUROPE (trail_ids 215–222) ──────────────────────────────────────────────
+  // The first continental-Europe set outside Iceland: Italy, Spain, France,
+  // Croatia, the UK and Switzerland. Not from AllTrails — hand-curated, with
+  // `alltrails_url` kept where the trail has a listing there.
+  //
+  // Every trail here is self-hosted from Wikimedia Commons under Creative
+  // Commons (see trailPhotos.js for per-image credit/license), matching how the
+  // Korea, Nepal and Iceland sets are handled. The original Unsplash stock was
+  // dropped: it was hotlinked, and seven of the eight images showed the wrong
+  // place entirely. Each `photo_url` is the trail's first gallery photo, and the
+  // gallery images were chosen to illustrate that trail's seasonal highlights.
+  //
+  // Two records cross borders, which this schema cannot express: the Tour du
+  // Mont Blanc loops through France, Italy and Switzerland, and the Walker's
+  // Haute Route runs Chamonix (France) to Zermatt (Switzerland). Each is filed
+  // under the country holding the trailhead, with the crossing noted in
+  // `description`.
+  //
+  // The four high-alpine routes (217 TMB, 218 GR20, 221 Alta Via 1, 222 Haute
+  // Route) ARE in SEASONAL_ACCESS — their high passes hold snow and the refuges
+  // that make them walkable are shut outside the summer window, so leaving them
+  // ungated would wrongly mark them year-round.
+  {
+    trail_id: 215,
+    slug: 'cinque-terre-sentiero-azzurro',
+    name: 'Cinque Terre (Sentiero Azzurro / Blue Trail)',
+    country: 'Italy',
+    region: 'Liguria',
+    distance_km: 12.0,
+    duration_hours: 5.5,
+    difficulty: 'Moderate',
+    difficulty_notes: 'Features steep stone steps, narrow cliffside paths, and continuous ascents/descents between the 5 coastal villages.',
+    elevation_gain_m: 580,
+    max_elevation_m: 220,
+    description: 'A legendary coastal trail along the Ligurian Sea connecting all 5 UNESCO World Heritage fishing villages (Monterosso, Vernazza, Corniglia, Manarola, Riomaggiore).',
+    photo_url: '/photos/cinque-terre-sentiero-azzurro-1.jpg',
+    latitude: 44.1461,
+    longitude: 9.6439,
+    status: 'Partially Closed',
+    status_last_checked: '2026-07-27',
+    status_source_url: 'https://www.parconazionale5terre.it',
+    alltrails_url: 'https://www.alltrails.com/trail/italy/liguria/sentiero-azzurro-monterosso-riomaggiore',
+    route_type: 'Point to point',
+    seasonal_highlights: [
+      {
+        highlight_id: 21501,
+        trail_id: 215,
+        month_start: 4,
+        month_end: 6,
+        tag: 'Spring Wildflowers & Mild Weather',
+        highlight_description: 'Pleasant weather, blooming wildflowers, and fewer crowds compared to the peak summer season.',
+      },
+      {
+        highlight_id: 21502,
+        trail_id: 215,
+        month_start: 9,
+        month_end: 10,
+        tag: 'Grape Harvest Season',
+        highlight_description: 'Grape harvest on cliffside terraced vineyards with comfortable sea temperatures ideal for swimming.',
+      },
+    ],
+  },
+  {
+    trail_id: 216,
+    slug: 'camino-de-santiago-frances',
+    name: 'Camino de Santiago (Camino Francés)',
+    country: 'Spain',
+    region: 'Navarre, La Rioja, Castile and León, Galicia',
+    distance_km: 780.0,
+    duration_hours: 240.0,
+    difficulty: 'Moderate',
+    difficulty_notes: 'Focuses on long-distance endurance over roughly 30–35 days. Terrain consists mostly of rolling hills, gravel tracks, and paved roads.',
+    elevation_gain_m: 11800,
+    max_elevation_m: 1515,
+    description: 'The world’s most famous historic pilgrimage route, starting in Saint-Jean-Pied-de-Port (France), crossing the Pyrenees, and ending at the Cathedral of Santiago de Compostela.',
+    photo_url: '/photos/camino-de-santiago-frances-1.jpg',
+    latitude: 43.1628,
+    longitude: -1.2372,
+    status: 'Open',
+    status_last_checked: '2026-07-27',
+    status_source_url: 'https://www.caminodesantiago.gal',
+    alltrails_url: 'https://www.alltrails.com/trail/spain/navarre/camino-frances-full-route',
+    route_type: 'Point to point',
+    seasonal_highlights: [
+      {
+        highlight_id: 21601,
+        trail_id: 216,
+        month_start: 5,
+        month_end: 6,
+        tag: 'Optimal Pilgrim Season',
+        highlight_description: 'Lush green countryside and comfortable temperatures, ideal for trekking long distances without summer heat.',
+      },
+      {
+        highlight_id: 21602,
+        trail_id: 216,
+        month_start: 9,
+        month_end: 10,
+        tag: 'Autumn Colors',
+        highlight_description: 'Stunning red and golden autumn foliage across the sweeping vineyards of La Rioja.',
+      },
+    ],
+  },
+  {
+    trail_id: 217,
+    slug: 'tour-du-mont-blanc',
+    name: 'Tour du Mont Blanc (TMB)',
+    country: 'France',
+    region: 'Auvergne-Rhône-Alpes / Mont Blanc Massif',
+    distance_km: 170.0,
+    duration_hours: 60.0,
+    difficulty: 'Hard',
+    difficulty_notes: 'High mountain terrain over roughly 8–11 days, with substantial elevation gain, steep climbs, and lingering snow patches on high mountain passes.',
+    elevation_gain_m: 10000,
+    max_elevation_m: 2665,
+    description: 'An epic multi-day circuit surrounding the Mont Blanc massif through France, Italy, and Switzerland, featuring grand glaciers and alpine peaks.',
+    photo_url: '/photos/tour-du-mont-blanc-1.jpg',
+    latitude: 45.9237,
+    longitude: 6.8694,
+    status: 'Open',
+    status_last_checked: '2026-07-27',
+    status_source_url: 'https://www.autourdumontblanc.com',
+    alltrails_url: 'https://www.alltrails.com/trail/france/haute-savoie/tour-du-mont-blanc-tmb',
+    route_type: 'Loop',
+    seasonal_highlights: [
+      {
+        highlight_id: 21701,
+        trail_id: 217,
+        month_start: 7,
+        month_end: 8,
+        tag: 'Alpine Flora & Open Passes',
+        highlight_description: 'High mountain passes are clear of snow, mountain refuges are fully open, and alpine wildflowers bloom across the meadows.',
+      },
+    ],
+  },
+  {
+    trail_id: 218,
+    slug: 'gr20-corsica',
+    name: 'GR20',
+    country: 'France',
+    region: 'Corsica',
+    distance_km: 180.0,
+    duration_hours: 90.0,
+    difficulty: 'Hard',
+    difficulty_notes: 'Renowned as one of Europe’s toughest trails, taking roughly 15–16 days. Involves technical granite scrambling, narrow exposed ridges, and steep ascents.',
+    elevation_gain_m: 12000,
+    max_elevation_m: 2148,
+    description: 'A rugged mountain traverse cutting through the island of Corsica from north to south, famous for its technical difficulty and dramatic granite peaks.',
+    photo_url: '/photos/gr20-corsica-1.jpg',
+    latitude: 42.5086,
+    longitude: 8.8556,
+    status: 'Open',
+    status_last_checked: '2026-07-27',
+    status_source_url: 'https://pnc.corsica',
+    alltrails_url: 'https://www.alltrails.com/trail/france/corsica/gr20-full-route',
+    route_type: 'Point to point',
+    seasonal_highlights: [
+      {
+        highlight_id: 21801,
+        trail_id: 218,
+        month_start: 6,
+        month_end: 7,
+        tag: 'Snow-Free Passes',
+        highlight_description: 'Snow melts off high mountain passes, leaving dry rock ideal for technical scrambling.',
+      },
+    ],
+  },
+  {
+    trail_id: 219,
+    slug: 'plitvice-lakes-trail',
+    name: 'Plitvice Lakes National Park (Program C)',
+    country: 'Croatia',
+    region: 'Lika-Senj County',
+    distance_km: 8.0,
+    duration_hours: 4.0,
+    difficulty: 'Easy',
+    difficulty_notes: 'Well-maintained wooden boardwalks and smooth dirt paths, with electric boat rides connecting lake sections.',
+    elevation_gain_m: 180,
+    max_elevation_m: 636,
+    description: 'A scenic trail weaving through vibrant turquoise limestone lakes and cascading waterfalls across both the Lower and Upper Lakes.',
+    photo_url: '/photos/plitvice-lakes-trail-1.jpg',
+    latitude: 44.8805,
+    longitude: 15.6161,
+    status: 'Open',
+    status_last_checked: '2026-07-27',
+    status_source_url: 'https://np-plitvicka-jezera.hr',
+    alltrails_url: 'https://www.alltrails.com/trail/croatia/lika-senj/plitvice-lakes-trail-c',
+    route_type: 'Loop',
+    seasonal_highlights: [
+      {
+        highlight_id: 21901,
+        trail_id: 219,
+        month_start: 5,
+        month_end: 6,
+        tag: 'Peak Water Flow',
+        highlight_description: 'Waterfalls reach maximum flow due to spring snowmelt, framed by lush green foliage.',
+      },
+      {
+        highlight_id: 21902,
+        trail_id: 219,
+        month_start: 10,
+        month_end: 10,
+        tag: 'Autumn Foliage Reflection',
+        highlight_description: 'Vibrant autumn foliage reflects off crystal-clear turquoise waters, creating optimal conditions for photography.',
+      },
+    ],
+  },
+  {
+    trail_id: 220,
+    slug: 'west-highland-way',
+    name: 'West Highland Way',
+    country: 'United Kingdom',
+    region: 'Scotland (Highlands)',
+    distance_km: 154.0,
+    duration_hours: 35.0,
+    difficulty: 'Moderate',
+    difficulty_notes: 'A mix of moorlands, lochside paths, old military roads, and moderate mountain passes, usually walked over 6–8 days.',
+    elevation_gain_m: 3150,
+    max_elevation_m: 550,
+    description: 'Scotland’s premier long-distance route, stretching from Milngavie past Loch Lomond to Fort William at the foot of Ben Nevis.',
+    photo_url: '/photos/west-highland-way-1.jpg',
+    latitude: 55.9425,
+    longitude: -4.3182,
+    status: 'Open',
+    status_last_checked: '2026-07-27',
+    status_source_url: 'https://www.westhighlandway.org',
+    alltrails_url: 'https://www.alltrails.com/trail/scotland/glasgow/the-west-highland-way',
+    route_type: 'Point to point',
+    seasonal_highlights: [
+      {
+        highlight_id: 22001,
+        trail_id: 220,
+        month_start: 5,
+        month_end: 5,
+        tag: 'Low Midges & Long Daylight',
+        highlight_description: 'May offers minimal midge activity, extended daylight hours, and lower average rainfall than mid-summer.',
+      },
+    ],
+  },
+  {
+    trail_id: 221,
+    slug: 'alta-via-1-dolomites',
+    name: 'Dolomites Alta Via 1',
+    country: 'Italy',
+    region: 'Veneto & Trentino-Alto Adige',
+    distance_km: 120.0,
+    duration_hours: 45.0,
+    difficulty: 'Hard',
+    difficulty_notes: 'High-altitude limestone trails over roughly 8–10 days, involving scree slopes, exposed section traverses, and steep climbs.',
+    elevation_gain_m: 6600,
+    max_elevation_m: 2752,
+    description: 'A classic high-route traverse through the heart of the Italian Dolomites, stretching from the iconic Lago di Braies south to Belluno.',
+    photo_url: '/photos/alta-via-1-dolomites-1.jpg',
+    latitude: 46.6947,
+    longitude: 12.0854,
+    status: 'Open',
+    status_last_checked: '2026-07-27',
+    status_source_url: 'https://www.dolomiti.org',
+    alltrails_url: 'https://www.alltrails.com/trail/italy/south-tyrol/alta-via-1-dolomiti',
+    route_type: 'Point to point',
+    seasonal_highlights: [
+      {
+        highlight_id: 22101,
+        trail_id: 221,
+        month_start: 7,
+        month_end: 9,
+        tag: 'Rifugio Season & Enrosadira',
+        highlight_description: 'Mountain huts (rifugi) are open, and hikers can witness "Enrosadira" — the pink and orange glow on limestone peaks at sunset.',
+      },
+    ],
+  },
+  {
+    trail_id: 222,
+    slug: 'walkers-haute-route',
+    name: 'Walker’s Haute Route',
+    country: 'Switzerland',
+    region: 'Valais / Swiss Alps',
+    distance_km: 200.0,
+    duration_hours: 75.0,
+    difficulty: 'Hard',
+    difficulty_notes: 'Demanding 11–14 day trail crossing multiple high passes above 2,800 meters. Steep, rocky terrain with variable alpine weather.',
+    elevation_gain_m: 14000,
+    max_elevation_m: 2987,
+    description: 'A legendary alpine trek linking two world mountaineering capitals, starting in Chamonix (Mont Blanc, France) and finishing in Zermatt (Matterhorn, Switzerland).',
+    photo_url: '/photos/walkers-haute-route-1.jpg',
+    latitude: 45.9237,
+    longitude: 6.8694,
+    status: 'Open',
+    status_last_checked: '2026-07-27',
+    status_source_url: 'https://www.valais.ch',
+    alltrails_url: 'https://www.alltrails.com/trail/switzerland/valais/the-walkers-haute-route-chamonix-to-zermatt',
+    route_type: 'Point to point',
+    seasonal_highlights: [
+      {
+        highlight_id: 22201,
+        trail_id: 222,
+        month_start: 7,
+        month_end: 8,
+        tag: 'High Pass Accessibility',
+        highlight_description: 'Peak summer window when high passes above 2,800 meters are free of heavy snow, offering clear views of the Matterhorn.',
+      },
+    ],
+  },
+
+  // ── SOUTH AMERICA (trail_ids 223–225) ───────────────────────────────────────
   // Hand-authored from the park authorities' own pages, not AllTrails, so these
   // carry no `alltrails_url`. Coordinates are the defining point of each route
   // (the Mirador Base Las Torres, Paso John Garner, the Aconcagua summit),
@@ -7055,7 +7359,7 @@ export const trails = [
   // `status` describes exceptional closures only, so these stay 'Open' with the
   // seasonal window carried in SEASONAL_ACCESS and the caveat in the notes.
   {
-    trail_id: 215,
+    trail_id: 223,
     slug: 'torres-del-paine-w-trek',
     name: 'Torres del Paine (W Trek)',
     country: 'Chile',
@@ -7076,16 +7380,16 @@ export const trails = [
     status_source_url: 'https://www.conaf.cl/parque_nacionales/parque-nacional-torres-del-paine/',
     seasonal_highlights: [
       {
-        highlight_id: 21501,
-        trail_id: 215,
+        highlight_id: 22301,
+        trail_id: 223,
         month_start: 11,
         month_end: 3,
         tag: 'Patagonian Summer',
         highlight_description: 'Up to 17 hours of daylight, every refugio and campsite open, and the warmest walking of the year — also the windiest and busiest.',
       },
       {
-        highlight_id: 21502,
-        trail_id: 215,
+        highlight_id: 22302,
+        trail_id: 223,
         month_start: 4,
         month_end: 5,
         tag: 'Autumn Lenga Colour',
@@ -7094,7 +7398,7 @@ export const trails = [
     ],
   },
   {
-    trail_id: 216,
+    trail_id: 224,
     slug: 'torres-del-paine-o-circuit',
     name: 'O Circuit (Torres del Paine)',
     country: 'Chile',
@@ -7115,16 +7419,16 @@ export const trails = [
     status_source_url: 'https://www.conaf.cl/parque_nacionales/parque-nacional-torres-del-paine/',
     seasonal_highlights: [
       {
-        highlight_id: 21601,
-        trail_id: 216,
+        highlight_id: 22401,
+        trail_id: 224,
         month_start: 11,
         month_end: 3,
         tag: 'Pass Crossing Window',
         highlight_description: 'The months when Paso John Garner is reliably passable, opening the long descent alongside Grey Glacier and its suspension bridges.',
       },
       {
-        highlight_id: 21602,
-        trail_id: 216,
+        highlight_id: 22402,
+        trail_id: 224,
         month_start: 12,
         month_end: 2,
         tag: 'Firebush & Guanaco',
@@ -7133,7 +7437,7 @@ export const trails = [
     ],
   },
   {
-    trail_id: 217,
+    trail_id: 225,
     slug: 'aconcagua-normal-route',
     name: 'Aconcagua (Normal Route)',
     country: 'Argentina',
@@ -7154,16 +7458,16 @@ export const trails = [
     status_source_url: 'https://informacionoficial.mendoza.gob.ar/energiayambiente/aconcagua/',
     seasonal_highlights: [
       {
-        highlight_id: 21701,
-        trail_id: 217,
+        highlight_id: 22501,
+        trail_id: 225,
         month_start: 12,
         month_end: 2,
         tag: 'Expedition Season',
         highlight_description: 'The heart of the permit season: rangers on the mountain, Plaza de Mulas base camp fully pitched, and the least brutal high-altitude temperatures of the year.',
       },
       {
-        highlight_id: 21702,
-        trail_id: 217,
+        highlight_id: 22502,
+        trail_id: 225,
         month_start: 1,
         month_end: 1,
         tag: 'Peak Summit Window',
@@ -7191,7 +7495,7 @@ export const ICONIC_TRAIL_IDS = new Set([
   173, 181, 182, 183, 187, 188, 193, // Taiwan: Syakaro, Dabajianshan, North Dawu, Jiaming Lake, Hehuan Jianshan, Hehuanshan East, Alishan Giant Trees
   196, 197, 198, 200, 203, 207, // Taiwan (NP): Yushan, Xueshan, Holy Ridge, Qilai, Zhuilu Old Trail, Elephant Mountain
   209, 210, 211, // Nepal: Annapurna Circuit, Annapurna Base Camp, Everest Base Camp
-  215, 216, 217, // South America: Torres del Paine W Trek, O Circuit, Aconcagua
+  223, 224, 225, // South America: Torres del Paine W Trek, O Circuit, Aconcagua
 ])
 
 export function isIconic(trail) {
@@ -7240,10 +7544,15 @@ export const SEASONAL_ACCESS = {
   128: [9, 2], 129: [10, 2], 130: [11, 2], 131: [9, 1], 132: [2, 4],
   133: [11, 2], 134: [10, 2], 135: [10, 2], 136: [11, 2], 137: [11, 2],
   172: [5, 2], // Doi Khun Tan — closes annually 1 Mar–30 Apr
+  // Europe — the high-alpine routes only. Their passes hold snow and the
+  // refuges that make them walkable are shut outside these windows. The other
+  // European trails (Cinque Terre, Camino, Plitvice, West Highland Way) are
+  // walkable year-round, so they stay ungated.
+  217: [6, 9], 218: [6, 10], 221: [6, 9], 222: [7, 9],
   // South America, from the park authorities' own closure notices (2026-07-30):
   // CONAF closes the Sendero W in June and July, and the Macizo Paine (O)
   // circuit from May until 31 October. Aconcagua's season is 15 Nov – 31 Mar.
-  215: [8, 5], 216: [11, 4], 217: [11, 3],
+  223: [8, 5], 224: [11, 4], 225: [11, 3],
 }
 
 export function isYearRound(trail) {
