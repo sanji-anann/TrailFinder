@@ -1,4 +1,6 @@
-// AUTO-GENERATED — do not edit by hand.
+// AUTO-GENERATED — do not edit by hand, EXCEPT the Europe entries (216–), which
+// were added manually; there is no generator script in the repo to regenerate
+// them from.
 // Iconic-trail photo galleries. Images are self-hosted in web/public/photos/,
 // sourced from Wikimedia Commons under the Creative Commons / public-domain
 // licences recorded in each entry (credit + license + source file page).
@@ -628,5 +630,42 @@ export const TRAIL_PHOTOS = {
     { url: '/photos/island-peak-climb-1.jpg', caption: 'On the summit ridge of Island Peak', credit: 'Mountaineer', license: 'CC BY 3.0', source: 'https://commons.wikimedia.org/wiki/File:Summitting_Island_Peak.jpg' },
     { url: '/photos/island-peak-climb-2.jpg', caption: 'Glaciers below Island Peak', credit: 'McKay Savage', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:Nepal_-_Island_Peak_-_008_-_Merging_Glaciers_far_below_(497820799).jpg' },
     { url: '/photos/island-peak-climb-3.jpg', caption: 'Imja Tse (Island Peak)', credit: 'Alonzo Lyons', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Alonzo-lyons-imja-tse-island-peak-nepal-DSCN6013.jpg' },
+  ],
+  215: [
+    { url: '/photos/cinque-terre-sentiero-azzurro-1.jpg', caption: 'Spring Wildflowers & Mild Weather — the path between Riomaggiore and Campiglia', credit: 'Davide Mauro', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Vigneti_tra_Riomaggiore_e_Campiglia_01.jpg' },
+    { url: '/photos/cinque-terre-sentiero-azzurro-2.jpg', caption: 'Grape Harvest Season — Vernazza and its terraces in September', credit: 'Nucleosynth', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Vernazza_from_the_Sentiero_Azzuro_20190912.jpg' },
+  ],
+  216: [
+    { url: '/photos/camino-de-santiago-frances-1.jpg', caption: 'A pilgrim crossing the Meseta', credit: 'Rocco Rossi', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:Camino_de_Santiago_(5364961214).jpg' },
+    { url: '/photos/camino-de-santiago-frances-2.jpg', caption: 'Optimal Pilgrim Season — walking out of Logroño through the spring vines', credit: 'Manuel Velazquez', license: 'CC BY 3.0', source: 'https://commons.wikimedia.org/wiki/File:VI%C3%91EDOS_Y_PEREGRINOS_A_LA_SALIDA_DE_LOGRO%C3%91O_-_panoramio.jpg' },
+    { url: '/photos/camino-de-santiago-frances-3.jpg', caption: 'Autumn Colors — the vineyards of La Rioja at Briñas', credit: 'Shaury', license: 'CC BY-SA 2.0', source: 'https://commons.wikimedia.org/wiki/File:Vi%C3%B1edos_en_Bri%C3%B1as.jpg' },
+  ],
+  217: [
+    { url: '/photos/tour-du-mont-blanc-1.jpg', caption: 'Alpine Flora & Open Passes — the Col de la Seigne in late July', credit: 'Rémih', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Col_de_la_Seigne_Col_de_Mya.jpg' },
+    { url: '/photos/tour-du-mont-blanc-2.jpg', caption: 'Lac Blanc above Chamonix, snow-free in August', credit: 'Tiia Monto', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:Chamonix_-_Lac_Blanc_4.jpg' },
+  ],
+  218: [
+    { url: '/photos/gr20-corsica-1.jpg', caption: 'Snow-Free Passes — dry granite at the Aiguilles de Bavella in June', credit: 'Rémih', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Aiguilles_de_Bavella_Bocca_Stazzunara.jpg' },
+    { url: '/photos/gr20-corsica-2.jpg', caption: 'The pozzines and grazing herds at Lac de Nino', credit: 'Rémih', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Lac_de_Nino_Capu_a_e_Furcelle.jpg' },
+  ],
+  219: [
+    { url: '/photos/plitvice-lakes-trail-1.jpg', caption: 'Peak Water Flow — the falls in full June spate', credit: 'Andro Galinovic', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Andro_Galinovic_-_Plitvice_falls_1.jpg' },
+    { url: '/photos/plitvice-lakes-trail-2.jpg', caption: 'Autumn Foliage Reflection — the lakes in October', credit: 'Malcolm Carlaw', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:Cooling_the_Fire.jpg' },
+  ],
+  220: [
+    { url: '/photos/west-highland-way-1.jpg', caption: 'Low Midges & Long Daylight — Loch Lomond from Conic Hill in May', credit: 'Tim Heaton', license: 'CC BY-SA 2.0', source: 'https://commons.wikimedia.org/wiki/File:Loch_Lomond_from_Conic_Hill_-_geograph.org.uk_-_4013605.jpg' },
+    { url: '/photos/west-highland-way-2.jpg', caption: 'Buachaille Etive Mòr above Rannoch Moor, late May', credit: 'Michael Graham', license: 'CC BY-SA 2.0', source: 'https://commons.wikimedia.org/wiki/File:Looking_towards_Buachaille_Etive_Mor_-_geograph.org.uk_-_2975922.jpg' },
+  ],
+  // 221's second photo is the enrosadira at Rifugio Bolzano, on the Sciliar rather
+  // than on the Alta Via 1 itself — kept because it is the only Commons image that
+  // shows both halves of the highlight (an open rifugio and the pink glow), and the
+  // caption names the hut so it does not read as a shot of this trail.
+  221: [
+    { url: '/photos/alta-via-1-dolomites-1.jpg', caption: 'Rifugio Season — the Averau seen from Rifugio Nuvolau in July', credit: 'jokin.lacalle', license: 'CC BY 4.0', source: 'https://commons.wikimedia.org/wiki/File:View_from_Rifugio_Nuvolau.jpg' },
+    { url: '/photos/alta-via-1-dolomites-2.jpg', caption: 'Enrosadira — sunset on the Catinaccio from Rifugio Bolzano', credit: 'Anna Marchenkova', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Tramonto_al_rifugio_Bolzano_(cropped).jpg' },
+  ],
+  222: [
+    { url: '/photos/walkers-haute-route-1.jpg', caption: 'High Pass Accessibility — Lac de Moiry and its glacier in August', credit: 'Christian David', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Barrage_de_Moiry.jpg' },
+    { url: '/photos/walkers-haute-route-2.jpg', caption: 'The Matterhorn above Zermatt, where the route ends', credit: 'Robertuswiki', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Matterhorn_Riffelsee_Spiegelung.jpg' },
   ],
 }
