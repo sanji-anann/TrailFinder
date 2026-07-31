@@ -10,6 +10,7 @@ export const COUNTRY_TO_CONTINENT = {
   Thailand: 'Asia',
   Taiwan: 'Asia',
   Nepal: 'Asia',
+  Indonesia: 'Asia',
   Iceland: 'Europe',
   Italy: 'Europe',
   Spain: 'Europe',
@@ -19,6 +20,7 @@ export const COUNTRY_TO_CONTINENT = {
   Switzerland: 'Europe',
   Chile: 'South America',
   Argentina: 'South America',
+  'United States': 'North America',
 }
 
 // Fall back to 'Other' so an unmapped country still filters sensibly

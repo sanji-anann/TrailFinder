@@ -3,7 +3,21 @@
 //
 // Covers Australia, New Zealand, Japan, Malaysia, Thailand, Iceland, South Korea,
 // Taiwan, Nepal, Italy, Spain, France, Croatia, the United Kingdom,
-// Switzerland, Chile and Argentina.
+// Switzerland, Chile, Argentina, the United States and Indonesia.
+//
+// INDONESIA (trail_ids 228–229) are not from AllTrails — they were written from
+// the managing authorities' own pages (BKSDA Bali for Mount Batur, the Gunung
+// Rinjani National Park office for Rinjani) and cross-checked against published
+// route figures. Photos are self-hosted Creative Commons images from Wikimedia
+// Commons (see trailPhotos.js), and they carry no `alltrails_url`. See the ASIA —
+// INDONESIA section header lower in this file.
+//
+// UNITED STATES (trail_ids 226–227) are not from AllTrails — they were written
+// from the National Park Service's own pages and, for the Wind River High Route,
+// from Andrew Skurka's route guide. Photos are self-hosted Creative Commons and
+// US-government public-domain images from Wikimedia Commons (see trailPhotos.js),
+// and they carry no `alltrails_url`. See the NORTH AMERICA section header lower
+// in this file.
 //
 // SOUTH AMERICA (trail_ids 223–225) are not from AllTrails — they were written
 // from the managing park authorities' own pages (CONAF for Torres del Paine,
@@ -7475,6 +7489,192 @@ export const trails = [
       },
     ],
   },
+
+  // ── NORTH AMERICA (trail_ids 226–227) ───────────────────────────────────────
+  // Hand-authored, not from AllTrails, so like the Nepal and South America sets
+  // these carry no `alltrails_url`. The JMT's figures are the National Park
+  // Service's and Wikipedia's; the Wind River High Route's come from Andrew
+  // Skurka, who established the route and publishes the only guide to it, since
+  // no agency describes it as a named route at all.
+  //
+  // The WRHR is a *route*, not a trail — about two thirds of it is cross-country
+  // — so it has no waymarking and no geojson sidecar, and its pin is the Titcomb
+  // Basin trail through the heart of the route (OpenStreetMap) rather than a
+  // terminus. The JMT's pin is its northern terminus at Happy Isles.
+  //
+  // `duration_hours` follows the rest of this file in meaning moving hours, not
+  // elapsed days, with the trip length in `difficulty_notes`. Both are in
+  // SEASONAL_ACCESS: the Sierra and the Winds are snowbound outside a short
+  // mid-summer window, and per the convention above `status` records only
+  // exceptional closures, so both stay 'Open'.
+  {
+    trail_id: 226,
+    slug: 'wind-river-high-route',
+    name: 'Wind River High Route',
+    country: 'United States',
+    region: 'Wyoming',
+    distance_km: 156.0,
+    duration_hours: 70.0,
+    difficulty: 'Hard',
+    difficulty_notes: 'Seven to ten days, two thirds of it off-trail: unmarked cross-country navigation over talus and boulder fields, Class 3 scrambling on nine alpine passes, and glacier crossings that want microspikes and an ice axe. No huts, no resupply, and no route to follow but your own.',
+    elevation_gain_m: 9150,
+    max_elevation_m: 4071,
+    description: 'A mostly off-trail traverse of the granite spine of Wyoming’s Wind River Range, bookended by two 13,000-foot summits and threading the alpine basins, glaciers and spires above the treeline.',
+    photo_url: '/photos/wind-river-high-route-1.jpg',
+    latitude: 43.1117,
+    longitude: -109.6359,
+    status: 'Open',
+    status_last_checked: '2026-07-30',
+    status_source_url: 'https://www.fs.usda.gov/r04/bridger-teton/recreation/bridger-wilderness',
+    route_type: 'Point to point',
+    seasonal_highlights: [
+      {
+        highlight_id: 22601,
+        trail_id: 226,
+        month_start: 7,
+        month_end: 8,
+        tag: 'Wildflower Basins',
+        highlight_description: 'The passes shed their deep snowpack and the tundra basins flower — the only dependable window for the cross-country sections.',
+      },
+      {
+        highlight_id: 22602,
+        trail_id: 226,
+        month_start: 9,
+        month_end: 9,
+        tag: 'Crisp Air & Frost',
+        highlight_description: 'Freezing nights end the mosquitoes and the air turns sharp and clear, though the first snows can shut the high passes without warning.',
+      },
+    ],
+  },
+  {
+    trail_id: 227,
+    slug: 'john-muir-trail',
+    name: 'John Muir Trail',
+    country: 'United States',
+    region: 'California (Sierra Nevada)',
+    distance_km: 344.0,
+    duration_hours: 140.0,
+    difficulty: 'Hard',
+    difficulty_notes: 'Around three weeks of high-altitude walking, much of it above 3,000 m and over ten passes, finishing up Mount Whitney. Bear canisters are compulsory, resupply means detouring off the trail, and the wilderness permit quota over Donohue Pass is the hardest part to get.',
+    elevation_gain_m: 14300,
+    max_elevation_m: 4421,
+    description: 'America’s most celebrated wilderness trail, running the length of the High Sierra from Yosemite Valley through the Ansel Adams Wilderness, Kings Canyon and Sequoia to the summit of Mount Whitney.',
+    photo_url: '/photos/john-muir-trail-1.jpg',
+    latitude: 37.7317,
+    longitude: -119.5587,
+    status: 'Open',
+    status_last_checked: '2026-07-30',
+    status_source_url: 'https://www.nps.gov/yose/planyourvisit/jmt.htm',
+    route_type: 'Point to point',
+    seasonal_highlights: [
+      {
+        highlight_id: 22701,
+        trail_id: 227,
+        month_start: 7,
+        month_end: 8,
+        tag: 'Meltwater & Meadows',
+        highlight_description: 'Snowmelt keeps the Merced and the Tuolumne running hard, and the high meadows flower once the passes clear.',
+      },
+      {
+        highlight_id: 22702,
+        trail_id: 227,
+        month_start: 9,
+        month_end: 10,
+        tag: 'Settled Skies & Reflections',
+        highlight_description: 'Afternoon thunderstorms give way to long settled spells, and the alpine tarns go still enough to mirror the granite at sunset.',
+      },
+    ],
+  },
+  // ── ASIA — INDONESIA (trail_ids 228–229) ────────────────────────────────────
+  // Hand-authored, not from AllTrails, so like the Nepal, South America and US
+  // sets these carry no `alltrails_url`. Both are active volcanoes: Mount Batur
+  // is Bali's classic pre-dawn sunrise climb, Mount Rinjani a strenuous multi-day
+  // traverse of Lombok's second-highest peak past its crater lake.
+  //
+  // `duration_hours` is moving hours, not elapsed days, with the trip length in
+  // `difficulty_notes`. Only Rinjani is in SEASONAL_ACCESS: its national park
+  // closes outright through the January–March monsoon, whereas Batur is climbable
+  // year-round (just cloudier in the wet season), so its highlight bars mark the
+  // best months without gating access. Per the convention above `status` records
+  // only exceptional closures (volcanic activity), so both stay 'Open'.
+  {
+    trail_id: 228,
+    slug: 'mount-batur-sunrise-trek',
+    name: 'Mount Batur (Sunrise Trek)',
+    country: 'Indonesia',
+    region: 'Bali',
+    distance_km: 7.5,
+    duration_hours: 4.0,
+    difficulty: 'Moderate',
+    difficulty_notes: 'A short but steep pre-dawn climb, started around 4 a.m. by headtorch to reach the rim for sunrise. The summit trail is loose volcanic ash and gravel over rock, slippery in the dark; guides are compulsory and arranged through the local HPPGB association.',
+    elevation_gain_m: 650,
+    max_elevation_m: 1717,
+    description: 'An active stratovolcano in Bali’s Kintamani highlands, world-famous for the pre-dawn climb to its crater rim and the sunrise over Mount Agung, Lake Batur and a sea of cloud.',
+    photo_url: '/photos/mount-batur-sunrise-trek-1.jpg',
+    latitude: -8.2423,
+    longitude: 115.3752,
+    status: 'Open',
+    status_last_checked: '2026-07-30',
+    status_source_url: 'https://ksda-bali.go.id',
+    route_type: 'Out & back',
+    seasonal_highlights: [
+      {
+        highlight_id: 22801,
+        trail_id: 228,
+        month_start: 4,
+        month_end: 10,
+        tag: 'Dry-Season Sunrise Window',
+        highlight_description: 'Clear skies and minimal rain open the unobstructed horizon views the climb is famous for — Mount Agung rising above a sea of cloud.',
+      },
+      {
+        highlight_id: 22802,
+        trail_id: 228,
+        month_start: 6,
+        month_end: 8,
+        tag: 'Cool Air & Crater Steam',
+        highlight_description: 'The driest, coolest weeks for the night ascent, with steam still venting from the summit crater at first light.',
+      },
+    ],
+  },
+  {
+    trail_id: 229,
+    slug: 'mount-rinjani-sembalun-to-senaru',
+    name: 'Mount Rinjani (Sembalun to Senaru)',
+    country: 'Indonesia',
+    region: 'West Nusa Tenggara (Lombok)',
+    distance_km: 34.0,
+    duration_hours: 24.0,
+    difficulty: 'Hard',
+    difficulty_notes: 'A demanding three-day, two-night traverse from Sembalun to Senaru. The pre-dawn summit push climbs endless loose scree in high wind and cold, and the crater-rim descents to the lake are steep and exposed. Camping and a licensed guide are required; the park books through the eRinjani system.',
+    elevation_gain_m: 3300,
+    max_elevation_m: 3726,
+    description: 'Indonesia’s second-highest volcano, crossing Lombok from Sembalun to Senaru over a hard-won 3,726 m summit and down to the emerald Segara Anak crater lake with its hot springs and the smoking Barujari cone.',
+    photo_url: '/photos/mount-rinjani-sembalun-to-senaru-1.jpg',
+    latitude: -8.4113,
+    longitude: 116.4574,
+    status: 'Open',
+    status_last_checked: '2026-07-30',
+    status_source_url: 'https://rinjaninationalpark.id',
+    route_type: 'Point to point',
+    seasonal_highlights: [
+      {
+        highlight_id: 22901,
+        trail_id: 229,
+        month_start: 4,
+        month_end: 10,
+        tag: 'Crater-Rim Season',
+        highlight_description: 'The national park reopens after the monsoon closure, giving safe passage along the Plawangan Sembalun crater rim to the summit.',
+      },
+      {
+        highlight_id: 22902,
+        trail_id: 229,
+        month_start: 6,
+        month_end: 8,
+        tag: 'Crater Lake & Hot Springs',
+        highlight_description: 'The driest window to drop into the caldera, camp by Segara Anak and soak in the geothermal springs on its shore.',
+      },
+    ],
+  },
 ]
 
 export const MONTH_NAMES = [
@@ -7496,6 +7696,8 @@ export const ICONIC_TRAIL_IDS = new Set([
   196, 197, 198, 200, 203, 207, // Taiwan (NP): Yushan, Xueshan, Holy Ridge, Qilai, Zhuilu Old Trail, Elephant Mountain
   209, 210, 211, // Nepal: Annapurna Circuit, Annapurna Base Camp, Everest Base Camp
   223, 224, 225, // South America: Torres del Paine W Trek, O Circuit, Aconcagua
+  226, 227, // United States: Wind River High Route, John Muir Trail
+  228, 229, // Indonesia: Mount Batur (Sunrise Trek), Mount Rinjani (Sembalun to Senaru)
 ])
 
 export function isIconic(trail) {
@@ -7553,6 +7755,14 @@ export const SEASONAL_ACCESS = {
   // CONAF closes the Sendero W in June and July, and the Macizo Paine (O)
   // circuit from May until 31 October. Aconcagua's season is 15 Nov – 31 Mar.
   223: [8, 5], 224: [11, 4], 225: [11, 3],
+  // United States — both are snowbound either side of the Sierra/Wind River
+  // summer. Skurka gives the WRHR window as August to mid-September, or from
+  // mid-July after a dry winter; the NPS gives the JMT's as July to September.
+  226: [7, 9], 227: [7, 9],
+  // Indonesia — Mount Rinjani only: the national park closes through the
+  // January–March monsoon and reopens for the April–December trekking season.
+  // Mount Batur (228) is climbable year-round, so it is deliberately NOT listed.
+  229: [4, 12],
 }
 
 export function isYearRound(trail) {

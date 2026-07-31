@@ -691,4 +691,40 @@ export const TRAIL_PHOTOS = {
     { url: '/photos/aconcagua-normal-route-2.jpg', caption: 'Laguna de Horcones at the park entrance, the route’s start', credit: 'Daniel P. Gauer', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:Laguna_de_Horcones_y_Aconcagua_(20878146773).jpg' },
     { url: '/photos/aconcagua-normal-route-3.jpg', caption: 'Plaza de Mulas base camp in February', credit: 'Radu Vatcu', license: 'CC BY 2.5', source: 'https://commons.wikimedia.org/wiki/File:Plaza_de_Mulas_2008-02-05.JPG' },
   ],
+  // United States (226–227). Same shape as South America above: hero first, then
+  // the photos follow the trail's seasonal_highlights in order.
+  //
+  // 226 has nothing for its September highlight. Commons has no autumn photo of
+  // the Winds *above* the treeline, which is where the whole route runs, and the
+  // range's alpine autumn is willow and tundra rather than the aspen that turn
+  // 1,500 m lower near the trailheads — so the last two photos are captioned for
+  // what they actually show (July snowpack, and the forested northern approach)
+  // instead of being passed off as the highlight.
+  226: [
+    { url: '/photos/wind-river-high-route-1.jpg', caption: 'Wildflowers in Titcomb Basin, the heart of the route', credit: 'Intermountain Region US Forest Service (Doug Wewer)', license: 'Public domain', source: 'https://commons.wikimedia.org/wiki/File:Wildflowers_in_Titcomb_Basin_Bridger-Teton_NF_Doug_Wewer_(11937347044).jpg' },
+    { url: '/photos/wind-river-high-route-2.jpg', caption: 'The Cirque of the Towers above the clouds in August', credit: 'Derrellwilliams', license: 'CC0', source: 'https://commons.wikimedia.org/wiki/File:Cirque_of_the_Towers_above_the_clouds_in_August_2024.jpg' },
+    { url: '/photos/wind-river-high-route-3.jpg', caption: 'Snowpack still lying below Fremont Peak in early July', credit: 'Fredlyfish4', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Wind_River_Range_July_2017_1.jpg' },
+    { url: '/photos/wind-river-high-route-4.jpg', caption: 'Squaretop Mountain above the upper Green River, at the northern end of the range', credit: 'Forest Service, USDA', license: 'Public domain', source: 'https://commons.wikimedia.org/wiki/File:Squaretop_Mountain.jpg' },
+  ],
+  227: [
+    { url: '/photos/john-muir-trail-1.jpg', caption: 'Banner Peak over Thousand Island Lake, seen from the trail', credit: 'Dcrjsr', license: 'CC BY 3.0', source: 'https://commons.wikimedia.org/wiki/File:Mt_Banner_and_Thousand_Island_Lake.jpg' },
+    { url: '/photos/john-muir-trail-2.jpg', caption: 'Hikers on the Nevada Fall footbridge above the Merced, in the trail’s first day out of Yosemite Valley', credit: 'Fabio Achilli', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:Nevada_Fall_Footbridge.jpg' },
+    { url: '/photos/john-muir-trail-3.jpg', caption: 'Tuolumne Meadows below Cathedral Peak, late summer', credit: 'Almonroth', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:Tuolumne_Meadows_hdr.jpg' },
+    { url: '/photos/john-muir-trail-4.jpg', caption: 'Settled Skies & Reflections — Mt Mendel and Mt Darwin mirrored in Sapphire Lake, Evolution Basin, in October', credit: 'Jeff P', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:Mt._Mendel_and_Mt._Darwin_reflected_in_Sapphire_Lake,_Evolution_Basin,_High_Sierra,_California.jpg' },
+  ],
+  // Indonesia (228–229), Wikimedia Commons. Hero first, then the photos follow
+  // the trail's seasonal_highlights in order: for 228 the sunrise window, then
+  // the summit crater; for 229 the crater-rim season, then the caldera lake.
+  228: [
+    { url: '/photos/mount-batur-sunrise-trek-1.jpg', caption: 'Sunrise from the summit over Lake Batur, with distant Rinjani on the horizon', credit: 'Aaron Rentfrew', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Sunrise_from_Mount_Batur.jpg' },
+    { url: '/photos/mount-batur-sunrise-trek-2.jpg', caption: 'Dawn breaking over the caldera from the crater rim', credit: 'Christophe95', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:View_from_Mount_Batur_at_sunrise.jpg' },
+    { url: '/photos/mount-batur-sunrise-trek-3.jpg', caption: 'Looking down into Mount Batur’s active summit crater', credit: 'Christophe95', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Crater_of_Mount_Batur_1.jpg' },
+    { url: '/photos/mount-batur-sunrise-trek-4.jpg', caption: 'The volcano’s cone, dark lava flows and Lake Batur seen by day', credit: 'Pablo Guerrero', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:Batur_Volcano_From_The_Crater_Rim_(183444551).jpeg' },
+  ],
+  229: [
+    { url: '/photos/mount-rinjani-sembalun-to-senaru-1.jpg', caption: 'The crater rim at dawn, Segara Anak lake and the Barujari cone below', credit: 'César González Palomo', license: 'CC BY-SA 2.0', source: 'https://commons.wikimedia.org/wiki/File:Mount_Rinjani_(20097616551).jpg' },
+    { url: '/photos/mount-rinjani-sembalun-to-senaru-2.jpg', caption: 'First light on the crater rim from the Plawangan campsite, the lake still in shadow', credit: 'Midori', license: 'CC BY 3.0', source: 'https://commons.wikimedia.org/wiki/File:Segara_Anak_Lake_view_from_Plawangan_II_Campsite.JPG' },
+    { url: '/photos/mount-rinjani-sembalun-to-senaru-3.jpg', caption: 'The Barujari cone rising from the turquoise Segara Anak lake, whose far shore holds the hot springs', credit: 'Midori', license: 'CC BY 3.0', source: 'https://commons.wikimedia.org/wiki/File:Mt._Barujari_Segara_Anak_Lake_descending_Mt._Rinjani_to_Plawangan_II.JPG' },
+    { url: '/photos/mount-rinjani-sembalun-to-senaru-4.jpg', caption: 'A sea of cloud filling the caldera at sunset', credit: 'Giovari max', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Lake_Segara_Anak_at_Sunset.jpg' },
+  ],
 }
