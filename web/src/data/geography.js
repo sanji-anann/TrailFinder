@@ -20,7 +20,10 @@ export const COUNTRY_TO_CONTINENT = {
   Switzerland: 'Europe',
   Chile: 'South America',
   Argentina: 'South America',
+  Peru: 'South America',
   'United States': 'North America',
+  Guatemala: 'North America',
+  Tanzania: 'Africa',
 }
 
 // Fall back to 'Other' so an unmapped country still filters sensibly

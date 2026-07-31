@@ -727,4 +727,32 @@ export const TRAIL_PHOTOS = {
     { url: '/photos/mount-rinjani-sembalun-to-senaru-3.jpg', caption: 'The Barujari cone rising from the turquoise Segara Anak lake, whose far shore holds the hot springs', credit: 'Midori', license: 'CC BY 3.0', source: 'https://commons.wikimedia.org/wiki/File:Mt._Barujari_Segara_Anak_Lake_descending_Mt._Rinjani_to_Plawangan_II.JPG' },
     { url: '/photos/mount-rinjani-sembalun-to-senaru-4.jpg', caption: 'A sea of cloud filling the caldera at sunset', credit: 'Giovari max', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Lake_Segara_Anak_at_Sunset.jpg' },
   ],
+  // World mix (230, 232–234), Wikimedia Commons. Hero first, then the photos
+  // follow each trail's seasonal_highlights in order. Doi Mon Ngo (235) has no
+  // Commons imagery of the actual viewpoint and so has no entry here.
+  230: [
+    { url: '/photos/huayhuash-circuit-1.jpg', caption: 'Turquoise glacial lakes below the snow peaks of the Cordillera Huayhuash', credit: 'brice pollock', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:Cordillera_Huayhuash,_August_28,_2016.jpg' },
+    { url: '/photos/huayhuash-circuit-2.jpg', caption: 'The snow-capped range under clear dry-season skies', credit: 'Walter Beteta Pacheco', license: 'CC BY 3.0', source: 'https://commons.wikimedia.org/wiki/File:Cordillera_Huayhuash_02359.JPG' },
+    { url: '/photos/huayhuash-circuit-3.jpg', caption: 'Glaciated peaks of the Huayhuash massif', credit: 'Walter Beteta Pacheco', license: 'CC BY 3.0', source: 'https://commons.wikimedia.org/wiki/File:Cordillera_Huayhuash_02358.JPG' },
+  ],
+  231: [
+    { url: '/photos/pha-kluai-mai-haew-suwat-trail-1.jpg', caption: 'Haew Suwat waterfall framed by a jungle arch, the trail’s far end', credit: 'Khajonrat.K', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Haew_Suwat_Waterfall_Through_the_Forest_Arch.jpg' },
+    { url: '/photos/pha-kluai-mai-haew-suwat-trail-2.jpg', caption: 'A thin dry-season strand over the exposed rock beds', credit: 'Vyacheslav Argenberg', license: 'CC BY 4.0', source: 'https://commons.wikimedia.org/wiki/File:Khao_Yai,_Thailand,_Haew_Suwat_Waterfall.jpg' },
+    { url: '/photos/pha-kluai-mai-haew-suwat-trail-3.jpg', caption: 'The full monsoon curtain of Haew Suwat', credit: 'BerryJ', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:1001_Khao_Yai_National_Park_1.jpg' },
+  ],
+  232: [
+    { url: '/photos/mount-kilimanjaro-machame-route-1.jpg', caption: 'Kilimanjaro’s snow-capped Kibo summit rising above the plains', credit: 'Ray in Manila', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:Kibo_Summit,_Mount_Kilimanjaro,_Tanzania_(30819102678).jpg' },
+    { url: '/photos/mount-kilimanjaro-machame-route-2.jpg', caption: 'The moss-draped montane rainforest zone on the lower Machame trail', credit: 'Jorge Láscar', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:Lascar_Montane_rainforests_biome_(4465641227).jpg' },
+    { url: '/photos/mount-kilimanjaro-machame-route-3.jpg', caption: 'The Uhuru Peak summit sign at 5,895 m, the roof of Africa', credit: 'Arne (Wikimedia Commons)', license: 'Public domain', source: 'https://commons.wikimedia.org/wiki/File:Kilimanjaro_Uhuru_Peak_Sign.jpg' },
+  ],
+  233: [
+    { url: '/photos/volcan-acatenango-1.jpg', caption: 'Volcán de Fuego erupting at dawn, seen from Acatenango', credit: 'Bex Walton', license: 'CC BY 4.0', source: 'https://commons.wikimedia.org/wiki/File:Up_early_to_watch_the_sunrise_over_Fuego_from_Acatenango_summit.jpg' },
+    { url: '/photos/volcan-acatenango-2.jpg', caption: 'An ash plume rising from Fuego by day', credit: 'amslerPIX', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:Volcanoes_Fuego_%26_Acatenango_2.jpg' },
+    { url: '/photos/volcan-acatenango-3.jpg', caption: 'The twin cones of Fuego and Acatenango above the highlands', credit: 'Scottydude', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Volc%C3%A1n_de_Fuego_and_Acatenango.jpg' },
+  ],
+  234: [
+    { url: '/photos/erawan-waterfall-trail-1.jpg', caption: 'Erawan’s multi-tiered limestone cascades spilling into an emerald pool', credit: 'Kushch Alexey', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Erawan_Kanchanaburi.jpg' },
+    { url: '/photos/erawan-waterfall-trail-2.jpg', caption: 'Clear turquoise pools stepping down the tiers', credit: 'yeowatzup', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:Erawan_National_Park,_Kanchanaburi,_Thailand_(355631121).jpg' },
+    { url: '/photos/erawan-waterfall-trail-3.jpg', caption: 'A jungle tier tumbling over mossy tufa rock', credit: 'Pulperm Phungprachit', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Erawan_Waterfall_-_Kanchanaburi_01.jpg' },
+  ],
 }
