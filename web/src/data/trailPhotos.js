@@ -227,9 +227,9 @@ export const TRAIL_PHOTOS = {
     { url: '/photos/jomon-sugi-cedar-trail-3.jpg', caption: 'Yakushima', credit: 'Raita Futo from Tokyo, Japan', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File%3AThe_Jomonsugi_Cedar_tree_%2852931651493%29.jpg' },
   ],
   65: [
-    { url: '/photos/mount-kinabalu-summit-trail-1.jpg', caption: 'Mount Kinabalu', credit: 'Blusjai', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File%3AGunung_Kinabalu%2C_panaroma_petang%2C_5.00_p.m._dari_Tuaran_bj.jpg' },
-    { url: '/photos/mount-kinabalu-summit-trail-2.jpg', caption: 'Mount Kinabalu', credit: 'Blusjai', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File%3AGunung_Kinabalu%2C_panaroma_petang%2C_5.00_p.m._dari_Tuaran_bj_4.jpg' },
-    { url: '/photos/mount-kinabalu-summit-trail-3.jpg', caption: 'Mount Kinabalu', credit: 'Blusjai', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File%3AGunung_Kinabalu_5.30_am.jpg' },
+    { url: '/photos/mount-kinabalu-summit-trail-1.jpg', caption: 'Victoria Peak’s bare granite dome glowing at dawn', credit: 'kallerna', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Victoria_Peak_Mount_Kinabalu_1.jpg' },
+    { url: '/photos/mount-kinabalu-summit-trail-2.jpg', caption: 'The summit rope snaking across the granite plateau above a sea of cloud', credit: 'kallerna', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Trail_Mount_Kinabalu_8.jpg' },
+    { url: '/photos/mount-kinabalu-summit-trail-3.jpg', caption: 'The jagged granite peaks of the summit plateau at first light', credit: 'kallerna', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Victoria_Peak_Mount_Kinabalu_2.jpg' },
   ],
   68: [
     { url: '/photos/bukit-teresek-taman-negara-1.jpg', caption: 'Taman Negara', credit: 'Mohd Fazlin Mohd Effendy Ooi', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File%3ATaman_Negara_%2830509997143%29.jpg' },
