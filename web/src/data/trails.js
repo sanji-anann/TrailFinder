@@ -7675,6 +7675,257 @@ export const trails = [
       },
     ],
   },
+  // ── WORLD MIX — PERU · TANZANIA · GUATEMALA · THAILAND (trail_ids 230–235) ───
+  // Hand-authored from the same LLM-drafted array workflow as the Nepal, South
+  // America, US and Indonesia sets, so like those these carry no `alltrails_url`
+  // (nothing came from the AllTrails MCP). Peru opens South America's second
+  // country, Tanzania opens the AFRICA continent, and Guatemala folds into the
+  // North America continent the US set opened; the three Thai trails join the
+  // existing large Thailand set.
+  //
+  // `duration_hours` is moving hours, not elapsed days: the trip length lives in
+  // `difficulty_notes`. Only Huayhuash is in SEASONAL_ACCESS — it is a genuine
+  // dry-season-only alpine circuit (snowbound passes outside May–Sep). The two
+  // volcanoes (Kilimanjaro, Acatenango) are climbable year-round, and the three
+  // Thai waterfall/viewpoint trails stay accessible year-round, so their
+  // highlight bars mark only the best months. Per the convention, `status`
+  // records exceptional closures only, so all six stay 'Open'. Doi Mon Ngo has
+  // no Commons imagery of the actual viewpoint, so it ships photo-less (empty
+  // `photo_url`, '(Photo pending.)' note) rather than with a mis-captioned one.
+  {
+    trail_id: 230,
+    slug: 'huayhuash-circuit',
+    name: 'Huayhuash Circuit',
+    country: 'Peru',
+    region: 'Ancash',
+    distance_km: 120.0,
+    duration_hours: 60.0,
+    difficulty: 'Hard',
+    difficulty_notes: 'A remote 8–10 day circuit of demanding high-altitude trekking consistently above 4,000 m, crossing multiple passes over 4,700 m in cold, fast-changing mountain weather far from any road.',
+    elevation_gain_m: 6000,
+    max_elevation_m: 5000,
+    description: 'A spectacular alpine trek circling the dramatic, snow-capped Cordillera Huayhuash range, famous for turquoise glacial lakes and sharp granite peaks.',
+    photo_url: '/photos/huayhuash-circuit-1.jpg',
+    latitude: -10.2762,
+    longitude: -76.9038,
+    status: 'Open',
+    status_last_checked: '2026-07-31',
+    status_source_url: 'https://www.peru.travel',
+    route_type: 'Loop',
+    seasonal_highlights: [
+      {
+        highlight_id: 23001,
+        trail_id: 230,
+        month_start: 5,
+        month_end: 9,
+        tag: 'Andean Dry Season',
+        highlight_description: 'Stable sunny days, crisp clear skies, and optimal conditions for crossing the high alpine mountain passes.',
+      },
+      {
+        highlight_id: 23002,
+        trail_id: 230,
+        month_start: 6,
+        month_end: 8,
+        tag: 'Peak Glacier & Lake Reflection',
+        highlight_description: 'Vibrant turquoise waters at Laguna Carhuacocha reflecting Mount Yerupajá during crystal-clear mornings.',
+      },
+    ],
+  },
+  {
+    trail_id: 231,
+    slug: 'pha-kluai-mai-haew-suwat-trail',
+    name: 'Pha Kluai Mai – Haew Suwat Waterfall Trail',
+    country: 'Thailand',
+    region: 'Nakhon Ratchasima (Khao Yai National Park)',
+    distance_km: 3.8,
+    duration_hours: 2.0,
+    difficulty: 'Moderate',
+    difficulty_notes: 'Shaded jungle path along the Lam Ta Khong creek with slippery rocks, exposed roots, and leeches during the rainy months.',
+    elevation_gain_m: 80,
+    max_elevation_m: 720,
+    description: 'A popular rainforest trail inside Khao Yai National Park linking two waterfalls, tracing a tranquil river through forest alive with wild orchids, gibbons and hornbills.',
+    photo_url: '/photos/pha-kluai-mai-haew-suwat-trail-1.jpg',
+    latitude: 14.4361,
+    longitude: 101.4022,
+    status: 'Open',
+    status_last_checked: '2026-07-31',
+    status_source_url: 'https://portal.dnp.go.th',
+    route_type: 'Point to point',
+    seasonal_highlights: [
+      {
+        highlight_id: 23101,
+        trail_id: 231,
+        month_start: 11,
+        month_end: 2,
+        tag: 'Cool Dry Season & Red Orchid Blooms',
+        highlight_description: 'Pleasant temperatures with low humidity, dropping water levels that reveal the rock beds, and blooming red Renanthera orchids.',
+      },
+      {
+        highlight_id: 23102,
+        trail_id: 231,
+        month_start: 8,
+        month_end: 10,
+        tag: 'Peak Waterfall Volume',
+        highlight_description: 'Monsoon rains bring full, roaring flow to both Pha Kluai Mai and Haew Suwat against a lush jungle canopy.',
+      },
+    ],
+  },
+  {
+    trail_id: 232,
+    slug: 'mount-kilimanjaro-machame-route',
+    name: 'Mount Kilimanjaro (Machame Route)',
+    country: 'Tanzania',
+    region: 'Kilimanjaro Region',
+    distance_km: 62.0,
+    duration_hours: 45.0,
+    difficulty: 'Hard',
+    difficulty_notes: 'A 6–7 day high-altitude climb topping out at 5,895 m, with steep scrambling up the Barranco Wall, extreme cold on the Uhuru Peak summit push, and a real risk of acute mountain sickness.',
+    elevation_gain_m: 4900,
+    max_elevation_m: 5895,
+    description: 'The scenic "Whiskey Route" up Kilimanjaro, climbing through five distinct ecological zones — from tropical rainforest to arctic summit — to the roof of Africa.',
+    photo_url: '/photos/mount-kilimanjaro-machame-route-1.jpg',
+    latitude: -3.0674,
+    longitude: 37.3556,
+    status: 'Open',
+    status_last_checked: '2026-07-31',
+    status_source_url: 'https://www.tanzaniaparks.go.tz',
+    route_type: 'Point to point',
+    seasonal_highlights: [
+      {
+        highlight_id: 23201,
+        trail_id: 232,
+        month_start: 1,
+        month_end: 3,
+        tag: 'Warm Dry Window',
+        highlight_description: 'Warmer temperatures on the summit push with clearer skies and less snow cover along the crater rim.',
+      },
+      {
+        highlight_id: 23202,
+        trail_id: 232,
+        month_start: 7,
+        month_end: 10,
+        tag: 'Primary Dry Trekking Season',
+        highlight_description: 'Consistently low rainfall across the rainforest and moorland zones, giving the best trail conditions of the year.',
+      },
+    ],
+  },
+  {
+    trail_id: 233,
+    slug: 'volcan-acatenango',
+    name: 'Volcán Acatenango Overnight Trail',
+    country: 'Guatemala',
+    region: 'Chimaltenango / Sacatepéquez',
+    distance_km: 14.0,
+    duration_hours: 10.0,
+    difficulty: 'Hard',
+    difficulty_notes: 'A continuous steep overnight ascent on loose volcanic gravel and scree, with cold high-altitude wind at base camp and a steep downhill descent.',
+    elevation_gain_m: 1600,
+    max_elevation_m: 3976,
+    description: 'A challenging volcanic ascent delivering world-class, front-row views of live lava eruptions from neighbouring Volcán de Fuego.',
+    photo_url: '/photos/volcan-acatenango-1.jpg',
+    latitude: 14.5008,
+    longitude: -90.8758,
+    status: 'Open',
+    status_last_checked: '2026-07-31',
+    status_source_url: 'https://inguat.gob.gt',
+    route_type: 'Out & back',
+    seasonal_highlights: [
+      {
+        highlight_id: 23301,
+        trail_id: 233,
+        month_start: 11,
+        month_end: 4,
+        tag: 'Dry Season Volcanic Night Show',
+        highlight_description: 'Clear night skies with high visibility for watching fiery lava explosions from Volcán de Fuego from high camp.',
+      },
+      {
+        highlight_id: 23302,
+        trail_id: 233,
+        month_start: 12,
+        month_end: 2,
+        tag: 'Crisp Sunrise over Cloud Sea',
+        highlight_description: 'Optimal atmospheric clarity at the summit rim for sunrise over the surrounding volcanoes and cloud layers.',
+      },
+    ],
+  },
+  {
+    trail_id: 234,
+    slug: 'erawan-waterfall-trail',
+    name: 'Erawan Waterfall 7-Tier Trail',
+    country: 'Thailand',
+    region: 'Kanchanaburi (Erawan National Park)',
+    distance_km: 4.5,
+    duration_hours: 2.5,
+    difficulty: 'Moderate',
+    difficulty_notes: 'Paved walkways serve tiers 1–4, then give way to steep wooden ladders, mud, and uneven limestone rock toward tiers 5–7.',
+    elevation_gain_m: 230,
+    max_elevation_m: 320,
+    description: 'A famous multi-tiered waterfall trail winding through bamboo forest and emerald limestone pools where hikers can swim with fish.',
+    photo_url: '/photos/erawan-waterfall-trail-1.jpg',
+    latitude: 14.3687,
+    longitude: 99.1438,
+    status: 'Open',
+    status_last_checked: '2026-07-31',
+    status_source_url: 'https://portal.dnp.go.th',
+    route_type: 'Out & back',
+    seasonal_highlights: [
+      {
+        highlight_id: 23401,
+        trail_id: 234,
+        month_start: 11,
+        month_end: 4,
+        tag: 'Emerald Water Clarity',
+        highlight_description: 'Calm flow turns the natural pools into crystal-clear turquoise-emerald swimming holes.',
+      },
+      {
+        highlight_id: 23402,
+        trail_id: 234,
+        month_start: 9,
+        month_end: 10,
+        tag: 'Peak Waterfall Flow',
+        highlight_description: 'Monsoon rains maximise the discharge across all seven tiers, surrounded by vivid green rainforest.',
+      },
+    ],
+  },
+  {
+    trail_id: 235,
+    slug: 'doi-mon-ngo-trail',
+    name: 'Doi Mon Ngo Trail',
+    country: 'Thailand',
+    region: 'Chiang Mai (Mae Taeng)',
+    distance_km: 4.2,
+    duration_hours: 2.0,
+    difficulty: 'Moderate',
+    difficulty_notes: 'A short but moderately steep dirt incline; the clay soil turns slippery in the morning dew along exposed cliff edges near the top. (Photo pending.)',
+    elevation_gain_m: 310,
+    max_elevation_m: 1425,
+    description: 'A scenic peak in Chiang Mai offering 360-degree views over rolling tea plantations, mist-filled valleys and mountain ranges.',
+    photo_url: '',
+    latitude: 19.1411,
+    longitude: 98.8825,
+    status: 'Open',
+    status_last_checked: '2026-07-31',
+    status_source_url: 'https://www.chiangmai.go.th',
+    route_type: 'Out & back',
+    seasonal_highlights: [
+      {
+        highlight_id: 23501,
+        trail_id: 235,
+        month_start: 11,
+        month_end: 2,
+        tag: 'Cool-Season Sea of Fog',
+        highlight_description: 'Spectacular early-morning mist filling the valleys around Mae Taeng, with views reaching Doi Chiang Dao.',
+      },
+      {
+        highlight_id: 23502,
+        trail_id: 235,
+        month_start: 10,
+        month_end: 11,
+        tag: 'Lush Green Tea Terraces',
+        highlight_description: 'The early post-monsoon weeks, with fresh green tea-bush hillsides and comfortable daytime temperatures.',
+      },
+    ],
+  },
 ]
 
 export const MONTH_NAMES = [
@@ -7698,6 +7949,7 @@ export const ICONIC_TRAIL_IDS = new Set([
   223, 224, 225, // South America: Torres del Paine W Trek, O Circuit, Aconcagua
   226, 227, // United States: Wind River High Route, John Muir Trail
   228, 229, // Indonesia: Mount Batur (Sunrise Trek), Mount Rinjani (Sembalun to Senaru)
+  230, 232, 233, // World mix: Huayhuash Circuit (Peru), Kilimanjaro Machame (Tanzania), Volcán Acatenango (Guatemala)
 ])
 
 export function isIconic(trail) {
@@ -7763,6 +8015,11 @@ export const SEASONAL_ACCESS = {
   // January–March monsoon and reopens for the April–December trekking season.
   // Mount Batur (228) is climbable year-round, so it is deliberately NOT listed.
   229: [4, 12],
+  // Peru — Huayhuash Circuit only: a genuine dry-season alpine trek, its high
+  // passes snowbound and dangerous outside the May–September Andean dry season.
+  // Kilimanjaro (232) and Acatenango (233) are climbable year-round (their
+  // highlight bars just mark the drier months), so neither is listed.
+  230: [5, 9],
 }
 
 export function isYearRound(trail) {
