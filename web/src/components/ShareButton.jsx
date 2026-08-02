@@ -9,15 +9,15 @@ import { useState } from 'react'
 // essentially alone; adding a `text` body makes them drop the card and paste
 // the description + link as plain text instead. The trail's own OG tags supply
 // the preview's title, description, and photo, so the body text is redundant.
-export default function ShareButton({ title }) {
+export default function ShareButton({ title, url, label = 'Share', copiedLabel = 'Link copied' }) {
   const [copied, setCopied] = useState(false)
 
   const handleShare = async () => {
-    const url = window.location.href
+    const shareUrl = url ?? window.location.href
 
     if (navigator.share) {
       try {
-        await navigator.share({ title, url })
+        await navigator.share({ title, url: shareUrl })
         return
       } catch (err) {
         // User dismissed the sheet — leave quietly, don't fall through to copy.
@@ -26,7 +26,7 @@ export default function ShareButton({ title }) {
     }
 
     try {
-      await navigator.clipboard.writeText(url)
+      await navigator.clipboard.writeText(shareUrl)
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     } catch {
@@ -39,10 +39,10 @@ export default function ShareButton({ title }) {
       type="button"
       className="share-btn"
       onClick={handleShare}
-      aria-label={copied ? 'Link copied to clipboard' : 'Share this trail'}
+      aria-label={copied ? copiedLabel : label}
     >
       <span aria-hidden="true">{copied ? '✓' : '↗'}</span>
-      {copied ? 'Link copied' : 'Share'}
+      {copied ? copiedLabel : label}
     </button>
   )
 }
