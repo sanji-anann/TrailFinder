@@ -74,12 +74,28 @@ export default function BirthMonthModal({ onClose }) {
   const surprise = () => {
     if (month == null) return
     const count = birthMonthFor(month)?.trails.length ?? 1
-    runReveal(1100, Math.floor(Math.random() * count))
+    // Re-rolling after a reveal shows a different tier than the current one.
+    const next = revealed ? pickTier(count, pickIndex) : Math.floor(Math.random() * count)
+    runReveal(revealed ? 800 : 1100, next)
   }
 
-  const showAnother = () => {
-    const count = birthMonthFor(month)?.trails.length ?? 1
-    runReveal(800, pickTier(count, pickIndex))
+  // Share the postcard's link. On mobile (and desktops with Web Share) this opens
+  // the native share sheet — Facebook, Instagram, Add to story, etc. Where Web
+  // Share is unavailable it falls back to Facebook's share dialog. Either way the
+  // link previews as the postcard via its og:image.
+  const shareLink = async () => {
+    const landingUrl = `${window.location.origin}/birth-month/${month}/${pickIndex}`
+    const shareTitle = `${entry.personality[lang]} · ${pickedTrail.name}`
+    if (navigator.share) {
+      try {
+        await navigator.share({ url: landingUrl, title: shareTitle })
+        return
+      } catch (err) { if (err?.name === 'AbortError') return }
+    }
+    window.open(
+      `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(landingUrl)}`,
+      '_blank', 'noopener,width=600,height=520',
+    )
   }
 
   // Save the postcard as an image. On devices with Web Share for files we hand
@@ -194,9 +210,9 @@ export default function BirthMonthModal({ onClose }) {
                   </div>
                 )}
                 <div className="bmm-actions-row">
-                  <button type="button" className="bmm-again" onClick={showAnother}>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5" /><path d="M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5" /></svg>
-                    {t('สุ่มเส้นทางอื่น', 'Show another trail')}
+                  <button type="button" className="bmm-again" onClick={shareLink}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7" /><path d="M16 6l-4-4-4 4" /><path d="M12 2v13" /></svg>
+                    {t('แชร์ลิงก์', 'Share link')}
                   </button>
                   {pickedTrail && (
                     <Link to={`/trail/${pickedTrail.slug}`} className="bmm-seetrail" onClick={onClose}>
