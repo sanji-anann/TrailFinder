@@ -8,6 +8,8 @@ import MonthPicker from '../components/MonthPicker'
 import TrailCard from '../components/TrailCard'
 import BrowseMap from '../components/BrowseMap'
 import MapTrailCard from '../components/MapTrailCard'
+import BirthMonthBanner from '../components/BirthMonthBanner'
+import BirthMonthModal from '../components/BirthMonthModal'
 
 export default function Home() {
   // Browsing state lives in context so it (and the scroll position) survive a
@@ -22,6 +24,7 @@ export default function Home() {
     scrollYRef,
   } = useHomeUi()
   const [selectedId, setSelectedId] = useState(null)
+  const [birthMonthOpen, setBirthMonthOpen] = useState(false)
 
   // Restore the remembered scroll position on mount (e.g. after tapping back),
   // and keep it up to date while browsing.
@@ -121,6 +124,8 @@ export default function Home() {
         </div>
       </section>
 
+      <BirthMonthBanner onOpen={() => setBirthMonthOpen(true)} />
+
       {view === 'map' ? (
         <div className="map-view">
           <BrowseMap
@@ -183,6 +188,8 @@ export default function Home() {
           )}
         </>
       )}
+
+      {birthMonthOpen && <BirthMonthModal onClose={() => setBirthMonthOpen(false)} />}
     </div>
   )
 }

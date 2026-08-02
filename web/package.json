@@ -5,12 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/prerender-og.mjs",
+    "build": "vite build && node scripts/prerender-og.mjs && node scripts/prerender-birthmonth.mjs",
+    "og:birthmonth": "node scripts/generate-birthmonth-og.mjs",
     "lint": "oxlint",
     "preview": "vite preview"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
+    "modern-screenshot": "^4.7.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-router-dom": "^7.18.1"
@@ -20,6 +22,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.3",
     "oxlint": "^1.71.0",
+    "playwright": "^1.62.1",
     "vite": "^8.1.1"
   }
 }

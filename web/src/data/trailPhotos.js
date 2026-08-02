@@ -8,6 +8,26 @@
 // Forestry Agency detail page (recreation.forest.gov.tw), reused under
 // Taiwan's Open Government Data License; source URL recorded per entry.
 export const TRAIL_PHOTOS = {
+  // Birth-Month feature: heroes re-sourced from Wikimedia Commons (CC) to replace
+  // external AllTrails images, so the shareable postcard exports cleanly.
+  109: [
+    { url: '/photos/khao-chang-phuak-1.jpg', caption: 'The knife-edge grassy ridge to the summit, near Thong Pha Phum', credit: 'Pitchayawat Proongsak', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Golden_light_on_Khao_Chang_Phueak.jpg' },
+  ],
+  114: [
+    { url: '/photos/doi-mon-jong-1.jpg', caption: 'The ridge to the summit at golden hour, Omkoi', credit: 'Unnawut Leepaisalsuwanna', license: 'CC BY 3.0', source: 'https://commons.wikimedia.org/wiki/File:Dp1m1161_Jpg_(132425131).jpeg' },
+  ],
+  115: [
+    { url: '/photos/khao-luang-sukhothai-1.jpg', caption: 'Sunset over Ramkhamhaeng National Park from the summit', credit: 'Chaiyathat', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Ramkhamhaeng_National_Park_(2).jpg' },
+  ],
+  110: [
+    { url: '/photos/phu-soi-dao-1.jpg', caption: 'The pine plateau near the summit, a classic camping spot', credit: 'M.inse31', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:Phu_Soi_Dao_camping_area.JPG' },
+  ],
+  113: [
+    { url: '/photos/ang-ka-nature-trail-1.jpg', caption: 'The mossy cloud-forest boardwalk at the summit of Doi Inthanon', credit: 'Ratthasart Khetkamkhua', license: 'CC0', source: 'https://commons.wikimedia.org/wiki/File:Angka_1.jpg' },
+  ],
+  37: [
+    { url: '/photos/mount-oyama-tateyama-murodo-1.jpg', caption: 'Mikurigaike pond reflecting the Tateyama peaks at Murodo', credit: 'くろふね', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:%E3%81%BF%E3%81%8F%E3%82%8A%E3%81%8C%E6%B1%A001.jpg' },
+  ],
   88: [
     { url: '/photos/laugavegur-trail-1.jpg', caption: 'Rhyolite hills on the Laugavegur', credit: 'Michal Klajban', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Laugavegur_hiking_trail,_Iceland_03.jpg' },
     { url: '/photos/laugavegur-trail-2.jpg', caption: 'The Laugavegur trail', credit: 'Michal Klajban', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Laugavegur_hiking_trail,_Iceland_08.jpg' },
@@ -754,5 +774,26 @@ export const TRAIL_PHOTOS = {
     { url: '/photos/erawan-waterfall-trail-1.jpg', caption: 'Erawan’s multi-tiered limestone cascades spilling into an emerald pool', credit: 'Kushch Alexey', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Erawan_Kanchanaburi.jpg' },
     { url: '/photos/erawan-waterfall-trail-2.jpg', caption: 'Clear turquoise pools stepping down the tiers', credit: 'yeowatzup', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:Erawan_National_Park,_Kanchanaburi,_Thailand_(355631121).jpg' },
     { url: '/photos/erawan-waterfall-trail-3.jpg', caption: 'A jungle tier tumbling over mossy tufa rock', credit: 'Pulperm Phungprachit', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Erawan_Waterfall_-_Kanchanaburi_01.jpg' },
+  ],
+  // Birth-month gap-fill trails (236–239), added 2026-07-31.
+  236: [
+    { url: '/photos/nakasendo-magome-tsumago-1.jpg', caption: 'The stone-paved Nakasendo through cedar forest between Magome and Tsumago', credit: 'Daderot', license: 'CC0', source: 'https://commons.wikimedia.org/wiki/File:Nakasendo_between_Magome_and_Tsumago_-_P1010112.jpg' },
+    { url: '/photos/nakasendo-magome-tsumago-2.jpg', caption: 'Autumn Foliage — maples above the trail in the Kiso Valley', credit: 'Daderot', license: 'CC0', source: 'https://commons.wikimedia.org/wiki/File:Foliage_-_Nakasendo_between_Magome_and_Tsumago_-_P1010024.jpg' },
+    { url: '/photos/nakasendo-magome-tsumago-3.jpg', caption: 'The old post road winding down toward Tsumago', credit: 'Daderot', license: 'CC0', source: 'https://commons.wikimedia.org/wiki/File:Nakasendo_between_Magome_and_Tsumago_-_P1010118.jpg' },
+  ],
+  237: [
+    { url: '/photos/kamikochi-valley-walk-1.jpg', caption: 'The Azusa River and the Hotaka range from Kappa Bridge', credit: '663highland', license: 'CC BY 2.5', source: 'https://commons.wikimedia.org/wiki/File:150920_Mt_Hotaka-dake_Kamikochi_Japan01s3.jpg' },
+    { url: '/photos/kamikochi-valley-walk-2.jpg', caption: 'Autumn Larch & Maple — Kamikochi in late October', credit: 'Ray Swi-hymn', license: 'CC BY-SA 2.0', source: 'https://commons.wikimedia.org/wiki/File:20171028_Kamikochi_1423_(38663490376).jpg' },
+    { url: '/photos/kamikochi-valley-walk-3.jpg', caption: 'Autumn colour along the Azusa River boardwalks', credit: 'Ray Swi-hymn', license: 'CC BY-SA 2.0', source: 'https://commons.wikimedia.org/wiki/File:20171028_Kamikochi_1429_(37831576755).jpg' },
+  ],
+  238: [
+    { url: '/photos/tre-cime-di-lavaredo-loop-1.jpg', caption: 'Hikers on the loop below the three towers of the Tre Cime di Lavaredo', credit: 'Tiia Monto', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:Trail_and_Tre_Cime.jpg' },
+    { url: '/photos/tre-cime-di-lavaredo-loop-2.jpg', caption: 'The Forcella Lavaredo pass (2,454 m) on the circuit', credit: 'Tiia Monto', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:Forcella_Lavaredo.jpg' },
+    { url: '/photos/tre-cime-di-lavaredo-loop-3.jpg', caption: 'Golden Autumn Light — the Tre Cime seen across the Dolomites in October', credit: 'Ximonic (Simo Räsänen)', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Wide_view_from_Monte_Specie,_Trentino-Alto_Adige,_Italy,_2025_October.jpg' },
+  ],
+  239: [
+    { url: '/photos/thi-lo-su-waterfall-1.jpg', caption: 'Thi Lo Su, Thailand’s largest waterfall, in the Umphang Wildlife Sanctuary', credit: 'Snobbird', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Thi_Lo_Su_Waterfall,_Umphang_Wildlife_Sanctuary,_Tak_Province,_Thailand.jpg' },
+    { url: '/photos/thi-lo-su-waterfall-2.jpg', caption: 'The full width of the tiers over limestone', credit: 'Yxejamir', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:TheeLorSue-h.jpg' },
+    { url: '/photos/thi-lo-su-waterfall-3.jpg', caption: 'Peak Waterfall Flow — the cascades framed by green jungle', credit: 'Tum2516', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:%E0%B8%97%E0%B8%B5%E0%B8%A5%E0%B8%AD%E0%B8%8B%E0%B8%B9.jpg' },
   ],
 }
