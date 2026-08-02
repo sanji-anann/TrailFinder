@@ -1917,3 +1917,25 @@ main {
 .bmp-quote { position: relative; z-index: 2; margin: 15px 6px 4px; padding: 14px 15px; background: var(--card-surface); border-radius: var(--radius-thumb); text-align: center; box-shadow: inset 0 0 0 1px var(--hairline); }
 .bmp-quote-line { font-size: 14.5px; line-height: 1.5; font-weight: 600; color: var(--ink); }
 .bmp.lang-en .bmp-quote-line { font-style: italic; font-weight: 500; }
+
+/* --- Shared postcard landing page (/birth-month/:month/:tier) --- */
+.bmshare { max-width: 520px; text-align: center; padding-top: 32px; padding-bottom: 60px; }
+.bmshare-kicker { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--terracotta); margin: 0 0 16px; }
+.bmshare-card { display: flex; justify-content: center; }
+.bmshare-actions { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 24px; }
+.bmshare-primary { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; background: var(--terracotta); color: #fff; font-weight: 600; font-size: 16px; padding: 13px 24px; border-radius: var(--radius-control); box-shadow: 0 4px 12px rgba(194, 88, 47, 0.3); }
+.bmshare-primary:hover { background: #b04f29; }
+.bmshare-secondary { color: var(--muted-ink); text-decoration: none; font-weight: 600; font-size: 15px; }
+.bmshare-secondary:hover { color: var(--ink); }
+
+/* --- 1200x630 OG-image composition (captured by the generator; ?og=1) --- */
+.bmog { position: fixed; top: 0; left: 0; z-index: 9999; width: 1200px; height: 630px; box-sizing: border-box; display: flex; align-items: center; gap: 44px; padding: 40px 64px; overflow: hidden; background: radial-gradient(760px 420px at 100% 0%, #fbeadd, transparent 60%), #f3e6d8; }
+.bmog-card { flex: 0 0 auto; zoom: 0.84; }
+.bmog-side { flex: 1; min-width: 0; }
+.bmog-eyebrow { font-size: 20px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--terracotta); }
+.bmog-persona { font-size: 54px; font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; margin-top: 14px; color: var(--ink); }
+.bmog-persona.th { font-family: var(--font-thai); font-weight: 700; }
+.bmog-trail { font-size: 30px; font-weight: 700; margin-top: 20px; color: var(--ink); }
+.bmog-meta { font-size: 20px; color: var(--muted-ink); margin-top: 8px; }
+.bmog-brand { display: flex; align-items: center; gap: 10px; margin-top: 32px; font-size: 20px; font-weight: 600; color: var(--muted-ink); }
+.bmog-tf { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 9px; background: var(--terracotta); color: #fff; font-weight: 800; font-size: 15px; }

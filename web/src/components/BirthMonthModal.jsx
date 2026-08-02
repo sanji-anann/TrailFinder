@@ -85,12 +85,18 @@ export default function BirthMonthModal({ onClose }) {
     if (!node || sharing) return
     setSharing(true)
     try {
+      // The postcard's own share landing page — it carries an og:image of the
+      // card, so a pasted link previews as the postcard on Facebook/etc.
+      const landingUrl = `${window.location.origin}/birth-month/${month}/${pickIndex}`
       const blob = await domToBlob(node, { scale: 3, backgroundColor: '#FDFAF2' })
       const file = new File([blob], `birth-month-trail-${pickedTrail.slug}.png`, { type: 'image/png' })
       const shareTitle = `${entry.personality[lang]} · ${pickedTrail.name}`
       if (navigator.canShare?.({ files: [file] })) {
-        await navigator.share({ files: [file], title: shareTitle })
+        await navigator.share({ files: [file], url: landingUrl, title: shareTitle })
+      } else if (navigator.share) {
+        await navigator.share({ url: landingUrl, title: shareTitle })
       } else {
+        try { await navigator.clipboard.writeText(landingUrl) } catch { /* clipboard blocked */ }
         const href = URL.createObjectURL(blob)
         const a = document.createElement('a')
         a.href = href
