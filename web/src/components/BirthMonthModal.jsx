@@ -21,6 +21,7 @@ function pickTier(count, prev) {
   return next
 }
 
+
 export default function BirthMonthModal({ onClose }) {
   const [lang, setLang] = useState('th')
   const [month, setMonth] = useState(null)
@@ -28,6 +29,7 @@ export default function BirthMonthModal({ onClose }) {
   const [loading, setLoading] = useState(false)
   const [revealed, setRevealed] = useState(false)
   const [sharing, setSharing] = useState(false)
+  const [saved, setSaved] = useState(false)
   const timer = useRef(null)
   const cardRef = useRef(null)
 
@@ -54,11 +56,13 @@ export default function BirthMonthModal({ onClose }) {
     setMonth(m)
     setRevealed(false)
     setLoading(false)
+    setSaved(false)
   }
 
   // Little pause before the reveal, so there's a beat of anticipation.
   const runReveal = (delay, nextIndex) => {
     if (timer.current) clearTimeout(timer.current)
+    setSaved(false)
     setLoading(true)
     timer.current = setTimeout(() => {
       setPickIndex(nextIndex)
@@ -78,34 +82,33 @@ export default function BirthMonthModal({ onClose }) {
     runReveal(800, pickTier(count, pickIndex))
   }
 
-  // Render the postcard face to a PNG and share it (native file-share where
-  // available — e.g. straight to an IG story on mobile) or download it.
-  const shareImage = async () => {
+  // Save the postcard as an image. On devices with Web Share for files we hand
+  // it to the share sheet (so it can go to Photos / an IG story); otherwise we
+  // download the PNG. (Sharing the /birth-month/<m>/<t> link elsewhere still
+  // previews as the postcard via its og:image.)
+  const saveImage = async () => {
     const node = cardRef.current?.querySelector('.bmp')
     if (!node || sharing) return
     setSharing(true)
     try {
-      // The postcard's own share landing page — it carries an og:image of the
-      // card, so a pasted link previews as the postcard on Facebook/etc.
-      const landingUrl = `${window.location.origin}/birth-month/${month}/${pickIndex}`
       const blob = await domToBlob(node, { scale: 3, backgroundColor: '#FDFAF2' })
       const file = new File([blob], `birth-month-trail-${pickedTrail.slug}.png`, { type: 'image/png' })
-      const shareTitle = `${entry.personality[lang]} · ${pickedTrail.name}`
       if (navigator.canShare?.({ files: [file] })) {
-        await navigator.share({ files: [file], url: landingUrl, title: shareTitle })
-      } else if (navigator.share) {
-        await navigator.share({ url: landingUrl, title: shareTitle })
-      } else {
-        try { await navigator.clipboard.writeText(landingUrl) } catch { /* clipboard blocked */ }
-        const href = URL.createObjectURL(blob)
-        const a = document.createElement('a')
-        a.href = href
-        a.download = file.name
-        a.click()
-        URL.revokeObjectURL(href)
+        try {
+          await navigator.share({ files: [file], title: `${entry.personality[lang]} · ${pickedTrail.name}` })
+          return
+        } catch (err) { if (err?.name === 'AbortError') return /* else fall through to download */ }
       }
+      const href = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = href
+      a.download = file.name
+      a.click()
+      URL.revokeObjectURL(href)
+      setSaved(true)
+      setTimeout(() => setSaved(false), 2200)
     } catch (err) {
-      if (err?.name !== 'AbortError') console.error('Postcard share failed', err)
+      if (err?.name !== 'AbortError') console.error('Save image failed', err)
     } finally {
       setSharing(false)
     }
@@ -174,9 +177,19 @@ export default function BirthMonthModal({ onClose }) {
               <div className="bmm-actions">
                 {pickedTrail && (
                   <div className="bmm-actions-row">
-                    <button type="button" className="share-btn" onClick={shareImage} disabled={sharing}>
-                      <span aria-hidden="true">{sharing ? '⏳' : '↗'}</span>
-                      {sharing ? t('กำลังสร้างรูป…', 'Preparing image…') : t('แชร์', 'Share')}
+                    <button type="button" className="share-btn" onClick={saveImage} disabled={sharing}>
+                      <span aria-hidden="true">
+                        {saved ? (
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12.5l4.2 4.2L19 6.5" /></svg>
+                        ) : (
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v12M7 11l5 5 5-5M5 20h14" /></svg>
+                        )}
+                      </span>
+                      {saved
+                        ? t('บันทึกแล้ว', 'Saved')
+                        : sharing
+                          ? t('กำลังเตรียม…', 'Preparing…')
+                          : t('บันทึกรูปภาพ', 'Save image')}
                     </button>
                   </div>
                 )}
